@@ -1,294 +1,200 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio – Sarah Omonsky</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f0e8;
-        color: #333;
-        line-height: 1.6;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Sarah Omonsky</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F0E8;
+      color: #333;
+      line-height: 1.6;
+    }
 
-      header {
-        text-align: center;
-        background-color: #e9e2d0;
-        padding: 4rem 1rem;
-      }
+    header {
+      text-align: center;
+      background-color: #E9E2D0;
+      padding: 4rem 1rem;
+    }
 
-      header img {
-        width: 400px; /* doppelt so groß */
-        height: 400px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #b8a472;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      }
+    header img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #B8A472;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
 
-      header h1 {
-        font-size: 2rem;
-        margin-top: 1rem;
-        color: #000;
-      }
+    header h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #000;
+    }
 
-      header p {
-        font-size: 1.1rem;
-        color: #444;
-      }
+    header p {
+      font-size: 1.1rem;
+      color: #444;
+    }
 
-      section {
-        max-width: 900px;
-        margin: 3rem auto;
-        background: #fff;
-        border-radius: 1rem;
-        padding: 2.5rem;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      }
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
 
-      h2 {
-        color: #000;
-        font-size: 1.5rem;
-        border-bottom: 2px solid #b8a472;
-        display: inline-block;
-        padding-bottom: 0.3rem;
-        margin-bottom: 1.5rem;
-      }
+    h2 {
+      color: #000;
+      font-size: 1.75rem;
+      border-bottom: 2px solid #B8A472;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
 
-      h4 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: #000000;
-      }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #000;
+    }
 
-      ul {
-        margin-left: 1.2rem;
-      }
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #000;
+    }
 
-      .about-img {
-        display: block;
-        margin: 1.5rem auto;
-        width: 35%;
-        border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
+    ul {
+      margin-left: 1.2rem;
+    }
 
-      .skills {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      justify-items: center;
+    }
 
-      .skill {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+    .portfolio-item {
+      border-radius: 0.75rem;
+      padding: 1rem;
+      border: 2px solid #B8A472;
+      background-color: #F5F0E8;
+    }
 
-      .skill-bar {
-        width: 70%;
-        height: 12px;
-        background-color: #e9e2d0;
-        border-radius: 6px;
-        overflow: hidden;
-      }
+    .portfolio-item img {
+      width: 100%;
+      height: 24rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
 
-      .skill-fill {
-        height: 12px;
-        background-color: #b8a472;
-        border-radius: 6px 0 0 6px;
-      }
+<body>
+  <!-- Header -->
+  <header>
+    <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto Sarah Omonsky" />
+    <h1>Sarah Omonsky</h1>
+    <p>Kauffrau für Digitalisierungsmanagement – Portfolio</p>
+  </header>
 
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
-        justify-items: center;
-      }
-
-      .portfolio-item {
-        border-radius: 0.75rem;
-        padding: 1rem;
-        border: 2px solid #b8a472;
-        background-color: #f5f0e8;
-      }
-
-      .portfolio-item img {
-        width: 100%;
-        height: 24rem;
-        object-fit: cover;
-        border-radius: 0.5rem;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto Sarah Omonsky" />
-      <h1>Sarah Omonsky</h1>
-      <p>Kauffrau für Digitalisierungsmanagement – Portfolio</p>
-    </header>
-
-    <section>
-      <h2>Über mich</h2>
-      <img src="about-me.jpg" alt="Sarah Omonsky" class="about-img" />
-      <p>
-        Ich bin eine engagierte und kreative Kauffrau für
-        Digitalisierungsmanagement mit einem besonderen Interesse an der
-        Schnittstelle zwischen Mensch und Technologie. Mein Ziel ist es,
-        digitale Prozesse zu gestalten, die nicht nur effizient, sondern auch
-        intuitiv und menschlich sind. Dabei kombiniere ich technisches
-        Verständnis mit Empathie und einem klaren Blick für praxisnahe Lösungen.
-      </p>
-      <p>
-        Mein beruflicher Weg begann in einer Arztpraxis, wo ich als
-        medizinische Fachangestellte tätig war. Dort habe ich gelernt,
-        strukturiert, verantwortungsbewusst und menschlich zu arbeiten.
-        Gleichzeitig habe ich erkannt, wie stark moderne Abläufe von gut
-        funktionierender Technik abhängen – und dass Digitalisierung genau hier
-        die Brücke schlagen kann.
-      </p>
-      <p>
-        Der Entschluss, in die IT zu wechseln, war für mich eine bewusste
-        Entscheidung: Ich wollte meine Erfahrung aus dem medizinischen Bereich
-        mit digitalem Denken verbinden, um Arbeitsprozesse zu verbessern und
-        Mitarbeitenden echte Entlastung zu bieten. Heute kombiniere ich
-        Organisationstalent, Prozessverständnis und technisches Know-how, um
-        sinnvolle, moderne Lösungen zu schaffen.
-      </p>
-    </section>
-
-    <section>
-      <h2>Mein Projekt: OnboardME</h2>
-
-      <h4>Projektbeschreibung:</h4>
-      <p>
-        <strong>OnboardME</strong> entstand aus meiner eigenen
-        <strong>Erfahrung</strong>, dass viele Unternehmen zwar neue
-        Mitarbeitende gewinnen, aber beim strukturierten Onboarding wertvolle
-        Zeit und Motivation verlieren. Ich wollte ein System entwickeln, das
-        diesen Prozess digital, klar und menschlich zugleich macht – ein
-        Werkzeug, das Orientierung bietet und gleichzeitig moderne
-        HR-Prozesse unterstützt.
-      </p>
-
-      <p>
-        Die Idee wuchs aus der Frage:
-        <em
-          >„Wie kann man den Einstieg in ein neues Unternehmen so gestalten,
-          dass sich Mitarbeitende vom ersten Tag an sicher, informiert und
-          integriert fühlen?“</em
-        >
-        Genau daraus wurde <strong>OnboardME</strong>.
-      </p>
-
-      <p>
-        Um diese Idee praktisch umzusetzen, entwickelte ich einen
-        <strong>funktionsfähigen, klickbaren Prototypen</strong> mit
-        <strong>FlutterFlow</strong>. Dieser zeigt, wie ein digital
-        unterstütztes Onboarding-System aussehen kann, das sowohl für neue
-        Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.
-      </p>
-
-      <p>
-        Das Ziel war, einen interaktiven <strong>Prototypen</strong> zu
-        erschaffen, der sowohl den administrativen Aufwand reduziert als auch
-        die emotionale Seite des Onboardings stärkt. Dabei standen
-        Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.
-      </p>
-
-      <p>
-        <strong>Leitsatz:</strong>
-        <em
-          >„OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es
-          schafft die Struktur und digitale Effizienz, die neue Mitarbeitende
-          brauchen, um nahtlos Teil des Unternehmens zu werden.“</em
-        >
-      </p>
-
-      <h4>Hauptfunktionen:</h4>
-      <ul>
-        <li>Zentrale Informationsübersicht für neue Mitarbeitende</li>
-        <li>Checklisten mit Fortschrittsanzeige</li>
-        <li>Dokumentenverwaltung und Status-Tracking</li>
-        <li>Admin-Dashboard für HR-Mitarbeitende</li>
-        <li>Integration von E-Learning-Ressourcen</li>
-      </ul>
-
-      <h4>Prototyp-Ansichten:</h4>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="screenshot1.jpg" alt="Screenshot 1" />
-        </div>
-        <div class="portfolio-item">
-          <img src="screenshot2.jpg" alt="Screenshot 2" />
-        </div>
-        <div class="portfolio-item">
-          <img src="screenshot3.jpg" alt="Screenshot 3" />
-        </div>
-        <div class="portfolio-item">
-          <img src="screenshot4.jpg" alt="Screenshot 4" />
-        </div>
-        <div class="portfolio-item">
-          <img src="screenshot5.jpg" alt="Screenshot 5" />
-        </div>
-        <div class="portfolio-item">
-          <img src="screenshot6.jpg" alt="Screenshot 6" />
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Meine Kompetenzen</h2>
-      <div class="skills">
-        <div class="skill">
-          <span>Projektmanagement & Prozessanalyse</span>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 90%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span>IT-Systemverständnis</span>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 80%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span>Kommunikation & Organisation</span>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 95%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span>Digitale Tools & Prototyping</span>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 85%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span>Empathie & Lösungsorientierung</span>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 100%"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      style="
-        text-align: center;
-        padding: 2rem;
-        background-color: #e9e2d0;
-        color: #333;
-      "
+  <!-- Über mich -->
+  <section>
+    <h2>Über mich</h2>
+    <div
+      style="border-radius: 0.75rem; padding: 2rem; border: 2px solid #8B7355; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); background-color: #D4C4A8;"
     >
-      © 2025 Sarah Omonsky – Portfolio
-    </footer>
-  </body>
-</html>
+      <h3>Mein Weg zur Digitalisierung</h3>
+      <div style="line-height: 1.75; color: #000000;">
+        <p><strong>Von der Praxis zur IT:</strong> Meine berufliche Laufbahn begann 2010 im Gesundheitswesen mit der Ausbildung zur Medizinischen Fachangestellten. Schon früh erkannte ich das enorme Potenzial der Digitalisierung zur Verbesserung von Arbeitsabläufen und Prozessen.</p>
+        <p><strong>Führung und Management:</strong> Als Fachwirtin für ambulante medizinische Versorgung übernahm ich Verantwortung für Praxismanagement, Personalführung und Qualitätssicherung. In dieser Position wurde mir bewusst, wie wichtig die Verbindung zwischen Fachkompetenz und IT-Know-how ist.</p>
+        <p><strong>Erfahrung in regulierten Strukturen:</strong> Über 10 Jahre habe ich in einer hochregulierten Branche gearbeitet, in der Datenschutz, Compliance und Qualitätsstandards höchste Priorität haben. Ich kenne die Herausforderungen, wenn etablierte Prozesse digitalisiert werden müssen, und verstehe die Bedeutung von Change Management bei der Einführung neuer Systeme.</p>
+        <p><strong>Die Brücke zwischen Fachbereich und IT:</strong> Durch meine Umschulung zur Kauffrau für Digitalisierungsmanagement verbinde ich jetzt beides: fundiertes Verständnis für Geschäftsprozesse und moderne IT-Kompetenz. Diese Kombination ermöglicht es mir, als Vermittlerin zwischen Fachabteilungen und IT-Teams zu agieren.</p>
+        <p><strong>Was mich auszeichnet:</strong> Ich bringe praktische Erfahrung in Stakeholder-Management, Prozessoptimierung und der Implementierung digitaler Lösungen in komplexen Organisationen mit. Meine Stärke liegt darin, Menschen für Veränderungen zu gewinnen und dabei sowohl die technischen als auch die menschlichen Aspekte der Digitalisierung zu berücksichtigen.</p>
+        <p><strong>Mein berufliches Ziel:</strong> Ich möchte meine Kompetenzen gezielt in Richtung Projektmanagement und Prozessoptimierung einsetzen. Die erfolgreiche Planung, Steuerung und Umsetzung von Digitalisierungsprojekten sowie die nachhaltige Verbesserung von Geschäftsprozessen sind meine Kerninteressen. Dabei verbinde ich strukturiertes Vorgehen mit praktischer Umsetzungsstärke.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projekt -->
+  <section>
+    <h2>Mein Projekt: OnboardME</h2>
+    <h4>Projektbeschreibung:</h4>
+    <p><strong>OnboardME</strong> entstand aus meiner eigenen <strong>Erfahrung</strong>, dass viele Unternehmen zwar neue Mitarbeitende gewinnen, aber beim strukturierten Onboarding wertvolle Zeit und Motivation verlieren. Ich wollte ein System entwickeln, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
+    <p>Die Idee wuchs aus der Frage: <em>„Wie kann man den Einstieg in ein neues Unternehmen so gestalten, dass sich Mitarbeitende vom ersten Tag an sicher, informiert und integriert fühlen?“</em> Genau daraus wurde <strong>OnboardME</strong>.</p>
+    <p>Um diese Idee praktisch umzusetzen, entwickelte ich einen <strong>funktionsfähigen, klickbaren Prototypen</strong> mit <strong>FlutterFlow</strong>. Dieser zeigt, wie ein digital unterstütztes Onboarding-System aussehen kann, das sowohl für neue Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.</p>
+    <p>Das Ziel war, einen interaktiven <strong>Prototypen</strong> zu erschaffen, der sowohl den administrativen Aufwand reduziert als auch die emotionale Seite des Onboardings stärkt. Dabei standen Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.</p>
+    <p><strong>Leitsatz:</strong> <em>„OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden.“</em></p>
+
+    <h4>Hauptfunktionen:</h4>
+    <ul>
+      <li>Zentrale Informationsübersicht für neue Mitarbeitende</li>
+      <li>Checklisten mit Fortschrittsanzeige</li>
+      <li>Dokumentenverwaltung und Status-Tracking</li>
+      <li>Admin-Dashboard für HR-Mitarbeitende</li>
+      <li>Integration von E-Learning-Ressourcen</li>
+    </ul>
+
+    <h4>Prototyp-Ansichten:</h4>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="screenshot1.jpg" alt="Screenshot 1" /></div>
+      <div class="portfolio-item"><img src="screenshot2.jpg" alt="Screenshot 2" /></div>
+      <div class="portfolio-item"><img src="screenshot3.jpg" alt="Screenshot 3" /></div>
+      <div class="portfolio-item"><img src="screenshot4.jpg" alt="Screenshot 4" /></div>
+      <div class="portfolio-item"><img src="screenshot5.jpg" alt="Screenshot 5" /></div>
+      <div class="portfolio-item"><img src="screenshot6.jpg" alt="Screenshot 6" /></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3);">
+    <div style="max-width: 72rem; margin: 0 auto;">
+      <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 3rem; text-align: center; color: #000000;">Meine Kompetenzen</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
+          <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #000000;">Projektmanagement</h3>
+          <div style="width: 100%; background-color: #B8A66E; border-radius: 9999px; height: 0.75rem;">
+            <div style="width: 85%; background: linear-gradient(to right, #8B7355, #6B5644); height: 0.75rem; border-radius: 9999px;"></div>
+          </div>
+          <p style="text-align: right; font-size: 0.875rem; margin-top: 0.5rem; color: #000000;">85%</p>
+        </div>
+
+        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
+          <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #000000;">Prozessoptimierung</h3>
+          <div style="width: 100%; background-color: #B8A66E; border-radius: 9999px; height: 0.75rem;">
+            <div style="width: 85%; background: linear-gradient(to right, #8B7355, #6B5644); height: 0.75rem; border-radius: 9999px;"></div>
+          </div>
+          <p style="text-align: right; font-size: 0.875rem; margin-top: 0.5rem; color: #000000;">85%</p>
+        </div>
+
+        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
+          <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: #000000;">Change Management</h3>
+          <div style="width: 100%; background-color: #B8A66E; border-radius: 9999px; height: 0.75rem;">
+            <div style="width: 80%; background: linear-gradient(to right, #8B7355, #6B5644); height: 0.75rem; border-radius: 9999px;"></div>
+          </div>
+          <p style="text-align: right; font-size: 0.875rem; margin-top: 0.5rem; color: #000000;">80%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3);">
+    <div style="max-width: 56rem; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 2rem; color: #000000;">Kontakt</h2>
+      <p style="font-size: 1.25rem; margin-bottom: 3rem; color: #000000;">Ich freue mich auf Ihre Nachricht und ein persönliches Gespräch.</p>
+      <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <a href="mailto:sarah.omonsky@web.de" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background-color: #D4C4A8; border: 2px solid #8B7355; border-radius: 0.75rem; text-decoration: none; color: #000000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+          <span>📧</span>
+          <span>
