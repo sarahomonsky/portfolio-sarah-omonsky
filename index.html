@@ -13,28 +13,32 @@
       color: #333;
       line-height: 1.6;
     }
+
+    /* ===== HEADER ===== */
     header {
       text-align: center;
       background-color: #E9E2D0;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
     }
     header img {
-      width: 240px; /* doppelt so groß wie vorher */
-      height: 240px;
+      width: 380px; /* jetzt deutlich größer */
+      height: 380px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #B8A472;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border: 6px solid #B8A472;
+      box-shadow: 0 0 20px rgba(0,0,0,0.25);
     }
     header h1 {
       font-size: 2rem;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       color: #000;
     }
     header p {
       font-size: 1.1rem;
       color: #444;
     }
+
+    /* ===== ALLGEMEINES LAYOUT ===== */
     section {
       max-width: 900px;
       margin: 3rem auto;
@@ -61,6 +65,8 @@
     ul {
       margin-left: 1.2rem;
     }
+
+    /* ===== BILDER ===== */
     .about-img {
       display: block;
       margin: 1.5rem auto;
@@ -68,6 +74,8 @@
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+
+    /* ===== PROTOTYP ===== */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -86,6 +94,14 @@
       height: 24rem;
       object-fit: cover;
       border-radius: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #E9E2D0;
+      color: #333;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -155,7 +171,7 @@
     </div>
   </section>
 
-  <footer style="text-align:center; padding: 2rem; background-color: #E9E2D0; color: #333;">
+  <footer>
     © 2025 Sarah Omonsky – Portfolio
   </footer>
 </body>
