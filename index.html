@@ -19,7 +19,7 @@
       padding: 4rem 1rem;
     }
     header img {
-      width: 480px; /* doppelt so groß */
+      width: 480px;
       height: 480px;
       object-fit: cover;
       border-radius: 50%;
@@ -34,6 +34,9 @@
     header p {
       font-size: 1.1rem;
       color: #444;
+      max-width: 700px;
+      margin: 0.5rem auto;
+      line-height: 1.7;
     }
     section {
       max-width: 900px;
@@ -54,10 +57,35 @@
     .about-img {
       display: block;
       margin: 1.5rem auto;
-      width: 25%; /* halb so groß */
+      width: 25%;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 30px;
+      border-left: 3px solid #B8A472;
+    }
+    .timeline-item {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      background-color: #B8A472;
+      border-radius: 50%;
+    }
+    .timeline-item strong {
+      color: #000;
+    }
+    /* Portfolio grid */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -83,10 +111,14 @@
 <body>
   <header>
     <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto Sarah Omonsky">
-    <h1>Kauffrau für Digitalisierungsmanagement</h1>
-    <p>Willkommen auf meinem Portfolio!
-Mein Name ist Sarah Omonsky, 32 Jahre – ehemalige Medizinische Fachangestellte und heute angehende Kauffrau für Digitalisierungsmanagement.
-Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und zukunftssicher zu gestalten.</p>
+    <h1>Sarah Omonsky</h1>
+    <p>Kauffrau für Digitalisierungsmanagement</p>
+
+    <p>
+      Willkommen auf meinem Portfolio! <br>
+      Mein Name ist <strong>Sarah Omonsky</strong>, 32 Jahre – ehemalige Medizinische Fachangestellte und heute angehende <strong>Kauffrau für Digitalisierungsmanagement</strong>. <br>
+      Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und <strong>zukunftssicher</strong> zu gestalten.
+    </p>
   </header>
 
   <section>
@@ -97,10 +129,20 @@ Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um 
     <p><strong>Führung und Management mit Weitblick:</strong> Als Fachwirtin für ambulante medizinische Versorgung vertiefte ich mein Wissen unter anderem in den Bereichen Praxismanagement, Personalführung und Qualitätssicherung. Diese Qualifikation ermöglichte mir nicht nur fachliche Tiefe, sondern auch einen strategischen Blick auf Prozesse und Strukturen.</p>
     <p><strong>Mehr als ein Jahrzehnt Erfahrung in einem anspruchsvollen Umfeld:</strong> Über zehn Jahre habe ich in einer Branche gearbeitet, in der Datenschutz, Compliance und Qualitätsstandards gelebte Praxis sind. Diese Erfahrung hat meinen Blick für Präzision, Verantwortung und die Bedeutung verlässlicher Abläufe geschärft.</p>
     <p><strong>Die Brücke zwischen Fachbereich und IT:</strong> Während meiner Tätigkeit im Gesundheitswesen wurde mir zunehmend bewusst: Viele Arbeitsabläufe könnten effizienter, transparenter und fehlerfreier gestaltet werden – durch Digitalisierung. Der Wunsch, nicht nur Prozesse zu verwalten, sondern sie aktiv zu transformieren, führte mich zur Entscheidung für eine Umschulung zur Kauffrau für Digitalisierungsmanagement.</p>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="timeline-item"><strong>08/2004 – 06/2009:</strong> Realschule</div>
+      <div class="timeline-item"><strong>08/2010 – 07/2013:</strong> Ausbildung zur Medizinischen Fachangestellten</div>
+      <div class="timeline-item"><strong>04/2014 – 02/2017:</strong> Fachwirtin für ambulante medizinische Versorgung</div>
+      <div class="timeline-item"><strong>2013 – 2022:</strong> Berufserfahrung in verschiedenen Fachbereichen</div>
+      <div class="timeline-item"><strong>04/2019 – 05/2019:</strong> Studienassistentin</div>
+      <div class="timeline-item"><strong>01/2024 – 02/2026:</strong> Umschulung zur Kauffrau für Digitalisierungsmanagement</div>
+    </div>
   </section>
 
   <section>
-    <h2>Mein Projekt: OnboardME</h2>
+    <h2>Mein Abschlussprojekt: OnboardME</h2>
 
     <h4>Projektbeschreibung:</h4>
     <p><strong>OnboardME</strong> entstand aus meiner eigenen <strong>Erfahrung</strong>, dass viele Unternehmen zwar neue Mitarbeitende gewinnen, aber beim strukturierten Onboarding wertvolle Zeit und Motivation verlieren. Ich wollte ein System entwickeln, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
@@ -133,7 +175,7 @@ Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um 
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Kompetenzen -->
   <section id="skills" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3);">
     <div style="max-width: 72rem; margin: 0 auto;">
       <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 3rem; text-align: center; color: #000000;">Meine Kompetenzen</h2>
@@ -178,7 +220,5 @@ Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um 
     <p style="font-size: 0.875rem; margin-top: 0.5rem;">Kauffrau für Digitalisierungsmanagement</p>
     <p style="font-size: 0.75rem; margin-top: 0.5rem; font-weight: 500;">Verfügbar ab März 2026</p>
   </footer>
-
 </body>
 </html>
-
