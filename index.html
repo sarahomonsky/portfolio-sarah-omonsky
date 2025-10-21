@@ -61,30 +61,96 @@
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    /* Timeline */
-    .timeline {
+
+    /* === Timeline Section === */
+    .timeline-section {
+      background-color: #F5F0E8;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .timeline-container {
       position: relative;
       margin: 2rem 0;
-      padding-left: 30px;
-      border-left: 3px solid #B8A472;
     }
-    .timeline-item {
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-    .timeline-item::before {
-      content: "";
+
+    .timeline-container::before {
+      content: '';
       position: absolute;
-      left: -10px;
-      top: 5px;
-      width: 15px;
-      height: 15px;
+      width: 4px;
       background-color: #B8A472;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 1rem 2rem;
+      position: relative;
+      width: 50%;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background-color: #E9E2D0;
+      border: 2px solid #B8A472;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #B8A472;
+      border: 3px solid #fff;
+      top: 20px;
       border-radius: 50%;
+      z-index: 1;
     }
-    .timeline-item strong {
-      color: #000;
+
+    .timeline-item.right::after {
+      left: -10px;
     }
+
+    .timeline-icon {
+      font-size: 1.5rem;
+      color: #6B5644;
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-container::before {
+        left: 8px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 1rem;
+      }
+      .timeline-item.left, .timeline-item.right {
+        text-align: left;
+        left: 0;
+      }
+      .timeline-item::after {
+        left: 0;
+      }
+    }
+
     /* Portfolio grid */
     .portfolio-grid {
       display: grid;
@@ -130,20 +196,51 @@
     <p><strong>Mehr als ein Jahrzehnt Erfahrung in einem anspruchsvollen Umfeld:</strong> Über zehn Jahre habe ich in einer Branche gearbeitet, in der Datenschutz, Compliance und Qualitätsstandards gelebte Praxis sind. Diese Erfahrung hat meinen Blick für Präzision, Verantwortung und die Bedeutung verlässlicher Abläufe geschärft.</p>
     <p><strong>Die Brücke zwischen Fachbereich und IT:</strong> Während meiner Tätigkeit im Gesundheitswesen wurde mir zunehmend bewusst: Viele Arbeitsabläufe könnten effizienter, transparenter und fehlerfreier gestaltet werden – durch Digitalisierung. Der Wunsch, nicht nur Prozesse zu verwalten, sondern sie aktiv zu transformieren, führte mich zur Entscheidung für eine Umschulung zur Kauffrau für Digitalisierungsmanagement.</p>
 
-    <!-- Timeline -->
-    <div class="timeline">
-      <div class="timeline-item"><strong>08/2004 – 06/2009:</strong> Realschule</div>
-      <div class="timeline-item"><strong>08/2010 – 07/2013:</strong> Ausbildung zur Medizinischen Fachangestellten</div>
-      <div class="timeline-item"><strong>04/2014 – 02/2017:</strong> Fachwirtin für ambulante medizinische Versorgung</div>
-      <div class="timeline-item"><strong>2013 – 2022:</strong> Berufserfahrung in verschiedenen Fachbereichen</div>
-      <div class="timeline-item"><strong>04/2019 – 05/2019:</strong> Studienassistentin</div>
-      <div class="timeline-item"><strong>01/2024 – 02/2026:</strong> Umschulung zur Kauffrau für Digitalisierungsmanagement</div>
+    <div class="timeline-section">
+      <h2>Mein Werdegang</h2>
+      <div class="timeline-container">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">🎓</div>
+            <strong>08/2004 – 06/2009:</strong> Realschule
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">💉</div>
+            <strong>08/2010 – 07/2013:</strong> Ausbildung zur Medizinischen Fachangestellten
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">🏥</div>
+            <strong>04/2014 – 02/2017:</strong> Fachwirtin für ambulante medizinische Versorgung
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">👩‍⚕️</div>
+            <strong>2013 – 2022:</strong> Berufserfahrung in verschiedenen Fachbereichen
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-icon">📚</div>
+            <strong>04/2019 – 05/2019:</strong> Studienassistentin
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-icon">💻</div>
+            <strong>01/2024 – 02/2026:</strong> Umschulung zur Kauffrau für Digitalisierungsmanagement
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section>
     <h2>Mein Abschlussprojekt: OnboardME</h2>
-
     <h4>Projektbeschreibung:</h4>
     <p><strong>OnboardME</strong> entstand aus meiner eigenen <strong>Erfahrung</strong>, dass viele Unternehmen zwar neue Mitarbeitende gewinnen, aber beim strukturierten Onboarding wertvolle Zeit und Motivation verlieren. Ich wollte ein System entwickeln, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
 
@@ -175,7 +272,6 @@
     </div>
   </section>
 
-  <!-- Kompetenzen -->
   <section id="skills" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3);">
     <div style="max-width: 72rem; margin: 0 auto;">
       <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 3rem; text-align: center; color: #000000;">Meine Kompetenzen</h2>
