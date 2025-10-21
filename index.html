@@ -13,11 +13,13 @@
       color: #333;
       line-height: 1.6;
     }
+
     header {
       text-align: center;
       background-color: #E9E2D0;
       padding: 4rem 1rem;
     }
+
     header img {
       width: 480px;
       height: 480px;
@@ -25,19 +27,22 @@
       border-radius: 50%;
       border: 4px solid #B8A472;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      max-width: 90%;
     }
+
     header h1 {
       font-size: 2rem;
       margin-top: 1rem;
       color: #000;
     }
+
     header p {
       font-size: 1.1rem;
       color: #444;
-      max-width: 700px;
-      margin: 0.5rem auto;
-      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     section {
       max-width: 900px;
       margin: 3rem auto;
@@ -46,6 +51,7 @@
       padding: 2.5rem;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #000;
       font-size: 1.5rem;
@@ -54,48 +60,16 @@
       padding-bottom: 0.3rem;
       margin-bottom: 1.5rem;
     }
+
     .about-img {
       display: block;
       margin: 1.5rem auto;
       width: 25%;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 100%;
     }
 
-    /* === Timeline === */
-    .timeline-section {
-      background-color: #F5F0E8;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-
-    .timeline-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      position: relative;
-    }
-
-    .timeline-content {
-      background-color: #E9E2D0;
-      border: 2px solid #B8A472;
-      border-radius: 0.75rem;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .timeline-icon {
-      font-size: 1.5rem;
-      color: #6B5644;
-      flex-shrink: 0;
-    }
-
-    /* Portfolio grid */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -103,17 +77,37 @@
       margin-bottom: 3rem;
       justify-items: center;
     }
+
     .portfolio-item {
       border-radius: 0.75rem;
       padding: 1rem;
       border: 2px solid #B8A472;
       background-color: #F5F0E8;
     }
+
     .portfolio-item img {
       width: 100%;
       height: 24rem;
       object-fit: cover;
       border-radius: 0.5rem;
+    }
+
+    /* Responsive Anpassungen */
+    @media (max-width: 768px) {
+      header img {
+        width: 280px;
+        height: 280px;
+      }
+      .about-img {
+        width: 50%;
+      }
+      section {
+        padding: 1.5rem;
+        margin: 1.5rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -121,11 +115,10 @@
 <body>
   <header>
     <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto Sarah Omonsky">
-    <h1>Kauffrau für Digitalisierungsmanagement</h1>
-    
+    <h1>Sarah Omonsky</h1>
     <p>
       Willkommen auf meinem Portfolio! <br>
-      Mein Name ist Sarah Omonsky, ich bin 32 Jahre alt. Vor über 15 Jahren fing meine berufliche Laufbahn als Medizinische Fachangestellte an, heute bin ich angehende Kauffrau für Digitalisierungsmanagement. <br>
+      Mein Name ist Sarah Omonsky, 32 Jahre – ehemalige Medizinische Fachangestellte, heute angehende Kauffrau für Digitalisierungsmanagement. <br>
       Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und zukunftssicher zu gestalten.
     </p>
   </header>
@@ -138,59 +131,25 @@
     <p><strong>Führung und Management mit Weitblick:</strong> Als Fachwirtin für ambulante medizinische Versorgung vertiefte ich mein Wissen unter anderem in den Bereichen Praxismanagement, Personalführung und Qualitätssicherung. Diese Qualifikation ermöglichte mir nicht nur fachliche Tiefe, sondern auch einen strategischen Blick auf Prozesse und Strukturen.</p>
     <p><strong>Mehr als ein Jahrzehnt Erfahrung in einem anspruchsvollen Umfeld:</strong> Über zehn Jahre habe ich in einer Branche gearbeitet, in der Datenschutz, Compliance und Qualitätsstandards gelebte Praxis sind. Diese Erfahrung hat meinen Blick für Präzision, Verantwortung und die Bedeutung verlässlicher Abläufe geschärft.</p>
     <p><strong>Die Brücke zwischen Fachbereich und IT:</strong> Während meiner Tätigkeit im Gesundheitswesen wurde mir zunehmend bewusst: Viele Arbeitsabläufe könnten effizienter, transparenter und fehlerfreier gestaltet werden – durch Digitalisierung. Der Wunsch, nicht nur Prozesse zu verwalten, sondern sie aktiv zu transformieren, führte mich zur Entscheidung für eine Umschulung zur Kauffrau für Digitalisierungsmanagement.</p>
-
-    <div class="timeline-section">
-      <h2>Mein Werdegang</h2>
-      <div class="timeline-container">
-        <div class="timeline-content">
-          <div class="timeline-icon">🎓</div>
-          <div>08/2004 – 06/2009: Realschule</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-icon">💉</div>
-          <div>08/2010 – 07/2013: Ausbildung zur Medizinischen Fachangestellten</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-icon">🏥</div>
-          <div>04/2014 – 02/2017: Fachwirtin für ambulante medizinische Versorgung</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-icon">👩‍⚕️</div>
-          <div>2013 – 2022: Berufserfahrung in verschiedenen Fachbereichen</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-icon">📚</div>
-          <div>04/2019 – 05/2019: Studienassistentin</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-icon">💻</div>
-          <div>01/2024 – 02/2026: Umschulung zur Kauffrau für Digitalisierungsmanagement</div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section>
     <h2>Mein Abschlussprojekt: OnboardME</h2>
-    <h4>Projektbeschreibung:</h4>
-    <p><strong>OnboardME</strong> entstand aus meiner eigenen <strong>Erfahrung</strong>, dass viele Unternehmen zwar neue Mitarbeitende gewinnen, aber beim strukturierten Onboarding wertvolle Zeit und Motivation verlieren. Ich wollte ein System entwickeln, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
 
-    <p>Die Idee wuchs aus der Frage: <em>„Wie kann man den Einstieg in ein neues Unternehmen so gestalten, dass sich Mitarbeitende vom ersten Tag an sicher, informiert und integriert fühlen?“</em> Genau daraus wurde <strong>OnboardME</strong>.</p>
+    <p>OnboardME entstand aufgrund meiner eigenen Onboarding-Erfahrung. In vielen Unternehmen fehlt ein strukturierter, transparenter und einheitlicher Onboarding-Prozess. Dadurch geht wertvolle Zeit sowie die Motivation neuer Mitarbeitenden verloren. Deshalb habe ich ein System entwickelt, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
 
-    <p>Um diese Idee praktisch umzusetzen, entwickelte ich einen <strong>klickbaren Prototypen</strong> mit <strong>FlutterFlow</strong>. Dieser zeigt, wie ein digital unterstütztes Onboarding-System aussehen kann, das sowohl für neue Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.</p>
+    <p>Um diese Idee greifbar zu machen, entwickelte ich einen klickbaren Prototypen via FlutterFlow. Dieser zeigt, wie ein digital unterstütztes Onboarding-System aussehen kann, das sowohl für neue Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.</p>
 
-    <p>Das Ziel war, einen interaktiven <strong>Prototypen</strong> zu erschaffen, der sowohl den administrativen Aufwand reduziert als auch die emotionale Seite des Onboardings stärkt. Dabei standen Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.</p>
+    <p>Das Ziel war, einen interaktiven Prototypen zu erschaffen, der sowohl den administrativen Aufwand reduziert als auch die emotionale Seite des Onboardings stärkt. Dabei standen Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.</p>
 
-    <p><strong>Leitsatz:</strong> <em>„OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden.“</em></p>
-
-    <h4>Hauptfunktionen:</h4>
+    <p><strong>Ergebnisse und Mehrwert:</strong></p>
     <ul>
-      <li>Zentrale Informationsübersicht für neue Mitarbeitende</li>
-      <li>Checklisten mit Fortschrittsanzeige</li>
-      <li>Dokumentenverwaltung und Status-Tracking</li>
-      <li>Admin-Dashboard für HR-Mitarbeitende</li>
-      <li>Integration von E-Learning-Ressourcen</li>
+      <li>Zeitersparnis von bis zu 30 % im Onboarding-Prozess</li>
+      <li>Reduzierung manueller Abstimmungsfehler</li>
+      <li>Steigerung von Transparenz und Nutzerzufriedenheit</li>
     </ul>
+
+    <p><strong>Leitsatz:</strong> „OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden.“</p>
 
     <h4>Prototyp-Ansichten:</h4>
     <div class="portfolio-grid">
@@ -226,11 +185,10 @@
     </div>
   </section>
 
-  <!-- Kontakt -->
-  <section id="kontakt" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3);">
-    <div style="max-width: 56rem; margin: 0 auto; text-align: center;">
+  <section id="kontakt" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3); text-align: center;">
+    <div style="max-width: 56rem; margin: 0 auto;">
       <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 2rem; color: #000000;">Kontakt</h2>
-      <p style="font-size: 1.25rem; margin-bottom: 3rem; color: #000000;">Ich freue mich auf Ihre Nachricht und ein persönliches Gespräch.</p>
+      <p style="font-size: 1.25rem; margin-bottom: 3rem; color: #000000;">Ich freue mich bereits jetzt auf ein persönliches Kennenlernen.</p>
       <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
         <a href="mailto:sarah.omonsky@web.de" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background-color: #D4C4A8; border: 2px solid #8B7355; border-radius: 0.75rem; text-decoration: none; color: #000000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
           ✉️ sarah.omonsky@web.de
@@ -249,5 +207,3 @@
   </footer>
 </body>
 </html>
-
-
