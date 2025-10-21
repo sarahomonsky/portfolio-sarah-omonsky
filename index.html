@@ -62,7 +62,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    /* === Timeline Section === */
+    /* === Timeline === */
     .timeline-section {
       background-color: #F5F0E8;
       border-radius: 1rem;
@@ -71,84 +71,28 @@
     }
 
     .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
       position: relative;
-      margin: 2rem 0;
-    }
-
-    .timeline-container::before {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: #B8A472;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-
-    .timeline-item {
-      padding: 1rem 2rem;
-      position: relative;
-      width: 50%;
-    }
-
-    .timeline-item.left {
-      left: 0;
-      text-align: right;
-    }
-
-    .timeline-item.right {
-      left: 50%;
     }
 
     .timeline-content {
       background-color: #E9E2D0;
       border: 2px solid #B8A472;
       border-radius: 0.75rem;
-      padding: 1rem;
-      position: relative;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      right: -10px;
-      background-color: #B8A472;
-      border: 3px solid #fff;
-      top: 20px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .timeline-item.right::after {
-      left: -10px;
     }
 
     .timeline-icon {
       font-size: 1.5rem;
       color: #6B5644;
-      margin-bottom: 0.5rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      .timeline-container::before {
-        left: 8px;
-      }
-      .timeline-item {
-        width: 100%;
-        padding-left: 3rem;
-        padding-right: 1rem;
-      }
-      .timeline-item.left, .timeline-item.right {
-        text-align: left;
-        left: 0;
-      }
-      .timeline-item::after {
-        left: 0;
-      }
+      flex-shrink: 0;
     }
 
     /* Portfolio grid */
@@ -182,8 +126,8 @@
 
     <p>
       Willkommen auf meinem Portfolio! <br>
-      Mein Name ist <strong>Sarah Omonsky</strong>, 32 Jahre – ehemalige Medizinische Fachangestellte und heute angehende <strong>Kauffrau für Digitalisierungsmanagement</strong>. <br>
-      Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und <strong>zukunftssicher</strong> zu gestalten.
+      Mein Name ist Sarah Omonsky, 32 Jahre – ehemalige Medizinische Fachangestellte und heute angehende Kauffrau für Digitalisierungsmanagement. <br>
+      Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und zukunftssicher zu gestalten.
     </p>
   </header>
 
@@ -199,41 +143,29 @@
     <div class="timeline-section">
       <h2>Mein Werdegang</h2>
       <div class="timeline-container">
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-icon">🎓</div>
-            <strong>08/2004 – 06/2009:</strong> Realschule
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">🎓</div>
+          <div>08/2004 – 06/2009: Realschule</div>
         </div>
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-icon">💉</div>
-            <strong>08/2010 – 07/2013:</strong> Ausbildung zur Medizinischen Fachangestellten
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">💉</div>
+          <div>08/2010 – 07/2013: Ausbildung zur Medizinischen Fachangestellten</div>
         </div>
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-icon">🏥</div>
-            <strong>04/2014 – 02/2017:</strong> Fachwirtin für ambulante medizinische Versorgung
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">🏥</div>
+          <div>04/2014 – 02/2017: Fachwirtin für ambulante medizinische Versorgung</div>
         </div>
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-icon">👩‍⚕️</div>
-            <strong>2013 – 2022:</strong> Berufserfahrung in verschiedenen Fachbereichen
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">👩‍⚕️</div>
+          <div>2013 – 2022: Berufserfahrung in verschiedenen Fachbereichen</div>
         </div>
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-icon">📚</div>
-            <strong>04/2019 – 05/2019:</strong> Studienassistentin
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">📚</div>
+          <div>04/2019 – 05/2019: Studienassistentin</div>
         </div>
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-icon">💻</div>
-            <strong>01/2024 – 02/2026:</strong> Umschulung zur Kauffrau für Digitalisierungsmanagement
-          </div>
+        <div class="timeline-content">
+          <div class="timeline-icon">💻</div>
+          <div>01/2024 – 02/2026: Umschulung zur Kauffrau für Digitalisierungsmanagement</div>
         </div>
       </div>
     </div>
