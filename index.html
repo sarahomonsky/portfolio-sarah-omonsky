@@ -27,7 +27,6 @@
       border-radius: 50%;
       border: 4px solid #B8A472;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      max-width: 90%;
     }
 
     header h1 {
@@ -39,8 +38,7 @@
     header p {
       font-size: 1.1rem;
       color: #444;
-      max-width: 600px;
-      margin: 0 auto;
+      margin: 0.5rem 0;
     }
 
     section {
@@ -67,9 +65,35 @@
       width: 25%;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      max-width: 100%;
     }
 
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1.5rem;
+    }
+
+    .timeline-item {
+      background-color: #D4C4A8;
+      border: 2px solid #8B7355;
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item h4 {
+      margin: 0;
+      font-size: 1rem;
+      color: #000;
+    }
+
+    .timeline-item p {
+      margin: 0.25rem 0 0;
+      color: #333;
+    }
+
+    /* Portfolio grid */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -92,7 +116,31 @@
       border-radius: 0.5rem;
     }
 
-    /* Responsive Anpassungen */
+    /* Skills */
+    #skills .skill-box {
+      background-color: #D4C4A8;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 2px solid #8B7355;
+      text-align: center;
+    }
+
+    /* Kontaktbereich */
+    #kontakt a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      background-color: #D4C4A8;
+      border: 2px solid #8B7355;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      color: #000000;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      margin: 0.5rem;
+    }
+
     @media (max-width: 768px) {
       header img {
         width: 280px;
@@ -103,25 +151,47 @@
       }
       section {
         padding: 1.5rem;
-        margin: 1.5rem;
-      }
-      .portfolio-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <img src="bewerbungsfoto.jpg" alt="Bewerbungsfoto Sarah Omonsky">
     <h1>Sarah Omonsky</h1>
-    <p>
-      Willkommen auf meinem Portfolio! <br>
-      Mein Name ist Sarah Omonsky, 32 Jahre – ehemalige Medizinische Fachangestellte, heute angehende Kauffrau für Digitalisierungsmanagement. <br>
-      Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und zukunftssicher zu gestalten.
-    </p>
+    <p>Kauffrau für Digitalisierungsmanagement</p>
+    <p>Willkommen auf meinem Portfolio!<br>
+    Mein Name ist Sarah Omonsky, 32 Jahre – ehemalige Medizinische Fachangestellte, heute angehende Kauffrau für Digitalisierungsmanagement.<br>
+    Ich verbinde praktische Erfahrung aus dem Gesundheitswesen mit IT-Kompetenz, um Prozesse effektiv und zukunftssicher zu gestalten.</p>
   </header>
+
+  <section>
+    <h2>Mein beruflicher Werdegang</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>01/2024 – 02/2026</h4>
+        <p>Umschulung zur Kauffrau für Digitalisierungsmanagement</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2013 – 2022</h4>
+        <p>Berufserfahrung in verschiedenen Fachbereichen des Gesundheitswesens</p>
+      </div>
+      <div class="timeline-item">
+        <h4>04/2014 – 02/2017</h4>
+        <p>Fachwirtin für ambulante medizinische Versorgung</p>
+      </div>
+      <div class="timeline-item">
+        <h4>08/2010 – 07/2013</h4>
+        <p>Ausbildung zur Medizinischen Fachangestellten</p>
+      </div>
+      <div class="timeline-item">
+        <h4>08/2004 – 06/2009</h4>
+        <p>Realschulabschluss</p>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Über mich</h2>
@@ -135,30 +205,21 @@
 
   <section>
     <h2>Mein Abschlussprojekt: OnboardME</h2>
-
     <p>OnboardME entstand aufgrund meiner eigenen Onboarding-Erfahrung. In vielen Unternehmen fehlt ein strukturierter, transparenter und einheitlicher Onboarding-Prozess. Dadurch geht wertvolle Zeit sowie die Motivation neuer Mitarbeitenden verloren. Deshalb habe ich ein System entwickelt, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
-
     <p>Um diese Idee greifbar zu machen, entwickelte ich einen klickbaren Prototypen via FlutterFlow. Dieser zeigt, wie ein digital unterstütztes Onboarding-System aussehen kann, das sowohl für neue Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.</p>
-
     <p>Das Ziel war, einen interaktiven Prototypen zu erschaffen, der sowohl den administrativen Aufwand reduziert als auch die emotionale Seite des Onboardings stärkt. Dabei standen Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.</p>
+    <p><strong>Ergebnisse und Mehrwert:</strong><br>
+      – Zeitersparnis von bis zu 30 % im Onboarding-Prozess<br>
+      – Reduzierung manueller Abstimmungsfehler<br>
+      – Steigerung von Transparenz und Nutzerzufriedenheit
+    </p>
+    <p><em>„OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden.“</em></p>
 
-    <p><strong>Ergebnisse und Mehrwert:</strong></p>
-    <ul>
-      <li>Zeitersparnis von bis zu 30 % im Onboarding-Prozess</li>
-      <li>Reduzierung manueller Abstimmungsfehler</li>
-      <li>Steigerung von Transparenz und Nutzerzufriedenheit</li>
-    </ul>
-
-    <p><strong>Leitsatz:</strong> „OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden.“</p>
-
-    <h4>Prototyp-Ansichten:</h4>
     <div class="portfolio-grid">
       <div class="portfolio-item"><img src="screenshot1.jpg" alt="Screenshot 1"></div>
       <div class="portfolio-item"><img src="screenshot2.jpg" alt="Screenshot 2"></div>
       <div class="portfolio-item"><img src="screenshot3.jpg" alt="Screenshot 3"></div>
       <div class="portfolio-item"><img src="screenshot4.jpg" alt="Screenshot 4"></div>
-      <div class="portfolio-item"><img src="screenshot5.jpg" alt="Screenshot 5"></div>
-      <div class="portfolio-item"><img src="screenshot6.jpg" alt="Screenshot 6"></div>
     </div>
   </section>
 
@@ -166,37 +227,25 @@
     <div style="max-width: 72rem; margin: 0 auto;">
       <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 3rem; text-align: center; color: #000000;">Meine Kompetenzen</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
-          <h3>Projektmanagement & Prozessanalyse</h3>
-        </div>
-        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
-          <h3>Technologieverständnis & Schnittstellenmanagement</h3>
-        </div>
-        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
-          <h3>IT-Systemverständnis & Datenmanagement</h3>
-        </div>
-        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
-          <h3>Organisation, Kommunikation & Teamarbeit</h3>
-        </div>
-        <div style="background-color: #D4C4A8; border-radius: 0.75rem; padding: 1.5rem; border: 2px solid #8B7355;">
-          <h3>Lösungsorientiertes Denken & Handeln</h3>
-        </div>
+        <div class="skill-box"><h3>Projektmanagement & Prozessanalyse</h3></div>
+        <div class="skill-box"><h3>Technologieverständnis & Schnittstellenmanagement</h3></div>
+        <div class="skill-box"><h3>IT-Systemverständnis & Datenmanagement</h3></div>
+        <div class="skill-box"><h3>Organisation, Kommunikation & Teamarbeit</h3></div>
+        <div class="skill-box"><h3>Lösungsorientiertes Denken & Handeln</h3></div>
       </div>
     </div>
   </section>
 
+  <!-- Kontakt -->
   <section id="kontakt" style="padding: 5rem 1.5rem; background-color: rgba(194, 176, 120, 0.3); text-align: center;">
     <div style="max-width: 56rem; margin: 0 auto;">
       <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 2rem; color: #000000;">Kontakt</h2>
       <p style="font-size: 1.25rem; margin-bottom: 3rem; color: #000000;">Ich freue mich bereits jetzt auf ein persönliches Kennenlernen.</p>
       <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-        <a href="mailto:sarah.omonsky@web.de" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background-color: #D4C4A8; border: 2px solid #8B7355; border-radius: 0.75rem; text-decoration: none; color: #000000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-          ✉️ sarah.omonsky@web.de
-        </a>
-        <a href="tel:+491722318451" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background-color: #D4C4A8; border: 2px solid #8B7355; border-radius: 0.75rem; text-decoration: none; color: #000000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-          📞 0172 / 2318451
-        </a>
+        <a href="mailto:sarah.omonsky@web.de">📧 sarah.omonsky@web.de</a>
+        <a href="tel:+491722318451">📞 0172 / 2318451</a>
       </div>
+      <p style="margin-top: 1.5rem; color: #000000;">🏡 Friedrich-Ebert-Straße 38, 34266 Niestetal</p>
     </div>
   </section>
 
@@ -205,5 +254,6 @@
     <p style="font-size: 0.875rem; margin-top: 0.5rem;">Kauffrau für Digitalisierungsmanagement</p>
     <p style="font-size: 0.75rem; margin-top: 0.5rem; font-weight: 500;">Verfügbar ab März 2026</p>
   </footer>
+
 </body>
 </html>
