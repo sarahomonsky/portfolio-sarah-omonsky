@@ -1,221 +1,706 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sarah Omonsky – Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Sarah Omonsky</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-:root{
-  --bg:#0b0d10;
-  --panel:#11141a;
-  --text:#e9eef5;
-  --muted:#b6c0cf;
-  --line:rgba(255,255,255,.12);
-  --accent:#d7b46a;
-  --radius:18px;
-}
+    :root {
+      --primary-color: #d4a5a5;
+      --primary-dark: #b88b8b;
+      --secondary-color: #e6c9c9;
+      --accent-color: #f5d5d5;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --bg-light: #faf8f7;
+      --bg-section: #ffffff;
+      --border-color: #f0e0e0;
+    }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-  background:linear-gradient(180deg,#07080a,var(--bg));
-  color:var(--text);
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.container{max-width:1100px;margin:auto;padding:0 20px}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--bg-light);
+    }
 
-header{
-  padding:60px 0 40px;
-}
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #d4a5a5 0%, #e6c9c9 100%);
+      color: #1f2937;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
 
-.lang-switch{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:10;
-}
+    .hero .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.lang-switch button{
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--line);
-  color:var(--text);
-  padding:8px 12px;
-  border-radius:999px;
-  cursor:pointer;
-  font-weight:600;
-}
+    .hero img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
 
-.lang-switch button:hover{
-  border-color:var(--accent);
-}
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
 
-.hero{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:30px;
-  align-items:center;
-}
+    .hero .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
 
-.hero img{
-  width:100%;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-}
+    .hero .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.kicker{
-  color:var(--accent);
-  text-transform:uppercase;
-  letter-spacing:.4px;
-  font-size:.8rem;
-  font-weight:700;
-}
+    .hero .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-h1{
-  font-size:2.6rem;
-  margin:.4rem 0;
-}
+    .btn {
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
 
-.sub{
-  color:var(--muted);
-  max-width:60ch;
-}
+    .btn-primary {
+      background: white;
+      color: var(--text-dark);
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px;
-  margin-top:40px;
-}
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
 
-.card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:18px;
-}
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-dark);
+      border: 2px solid var(--text-dark);
+    }
 
-.card h3{
-  color:var(--accent);
-  margin:0 0 6px;
-  font-size:.85rem;
-  text-transform:uppercase;
-  letter-spacing:.4px;
-}
+    .btn-secondary:hover {
+      background: white;
+      color: var(--text-dark);
+    }
 
-section{padding:60px 0}
+    /* Section Styles */
+    section {
+      padding: 5rem 2rem;
+    }
 
-.map{
-  border-radius:var(--radius);
-  overflow:hidden;
-  border:1px solid var(--line);
-}
+    section:nth-child(even) {
+      background-color: var(--bg-section);
+    }
 
-footer{
-  padding:40px 0;
-  text-align:center;
-  color:var(--muted);
-  border-top:1px solid var(--line);
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Language handling */
-[data-lang]{display:none}
-[data-lang].active{display:block}
+    h2 {
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 700;
+    }
 
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-}
-</style>
+    h2 i {
+      color: var(--primary-color);
+      margin-right: 1rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--primary-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.625rem;
+      top: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--bg-light);
+    }
+
+    .timeline-item h4 {
+      color: var(--primary-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .timeline-item p {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .about-text h3 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .about-text strong {
+      color: var(--text-dark);
+    }
+
+    /* Project Section */
+    .project-header {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+    }
+
+    .project-header h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .project-content p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .project-highlights {
+      background: linear-gradient(135deg, #f5f0ed 0%, #f0e8e4 100%);
+      padding: 2rem;
+      border-radius: 1rem;
+      border-left: 4px solid var(--primary-color);
+      margin: 2rem 0;
+    }
+
+    .project-highlights h4 {
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .project-highlights ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .project-highlights li {
+      padding: 0.5rem 0;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .project-highlights li::before {
+      content: '✓';
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .project-quote {
+      font-style: italic;
+      color: var(--text-dark);
+      font-size: 1.15rem;
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin: 2rem 0;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .portfolio-item {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s;
+      border-top: 4px solid var(--primary-color);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .skill-card i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+      color: var(--text-dark);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, #d4a5a5 0%, #e6c9c9 100%);
+      color: var(--text-dark);
+    }
+
+    .contact-section h2 {
+      color: var(--text-dark);
+    }
+
+    .contact-section .section-subtitle {
+      color: var(--text-dark);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      border: 2px solid rgba(255,255,255,0.2);
+      transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-5px);
+    }
+
+    .contact-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-card p {
+      color: var(--text-dark);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: #000000;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      opacity: 1;
+    }
+
+    .availability {
+      display: inline-block;
+      background: var(--primary-color);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .hero .tagline {
+        font-size: 1rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-img {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+
+      .timeline {
+        padding-left: 1.5rem;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="lang-switch">
-  <button onclick="setLang('de')">DE</button>
-  <button onclick="setLang('en')">EN</button>
-</div>
-
-<header class="container">
-  <div class="hero">
-
-    <div>
-      <div class="kicker">Portfolio</div>
-
-      <!-- DE -->
-      <div data-lang="de" class="active">
-        <h1>Mein Fundament ist die Medizin.<br>Meine Zukunft ist die Digitalisierung.</h1>
-        <p class="sub">
-          Ich verbinde Verantwortung, Prozessdenken und Digitalisierung,
-          um echten Mehrwert für Menschen und Organisationen zu schaffen.
-        </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <img src="bewerbungsfoto.jpg" alt="Sarah Omonsky">
+      <h1>Sarah Omonsky</h1>
+      <p class="subtitle">Kauffrau für Digitalisierungsmanagement</p>
+      
+      <p class="tagline">Von der Medizin zur digitalen Transformation – ich bringe Prozessverständnis und IT-Kompetenz zusammen, um Ihr Unternehmen voranzubringen.</p>
+      
+      <!-- Navigation Links -->
+      <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+        <a href="#about" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Über mich</a>
+        <a href="#experience" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Werdegang</a>
+        <a href="#project" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">OnboardME</a>
+        <a href="#skills" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Kompetenzen</a>
+        <a href="#contact" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Kontakt</a>
+        <span style="color: #000000;">|</span>
+        <a href="#" style="text-decoration: none; color: var(--primary-color); font-weight: 700;">DE</a>
+        <a href="#" style="text-decoration: none; color: #6b7280; font-weight: 600; opacity: 0.5;">EN</a>
       </div>
+    </div>
+  </section>
 
-      <!-- EN -->
-      <div data-lang="en">
-        <h1>My foundation is healthcare.<br>My future is digitalization.</h1>
-        <p class="sub">
-          I combine responsibility, process thinking and digital solutions
-          to create real value for people and organizations.
-        </p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Background</h3>
-          <div data-lang="de" class="active">Gesundheitswesen & Fachwirt</div>
-          <div data-lang="en">Healthcare & Business Administration</div>
-        </div>
-
-        <div class="card">
-          <h3>Fokus</h3>
-          <div data-lang="de" class="active">Prozesse, Projekte & IT</div>
-          <div data-lang="en">Processes, Projects & IT</div>
-        </div>
-
-        <div class="card">
-          <h3>Projekt</h3>
-          <div data-lang="de" class="active">OnboardMe – digitales Onboarding</div>
-          <div data-lang="en">OnboardMe – digital onboarding</div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2><i class="fas fa-user"></i>Über mich</h2>
+      <p class="section-subtitle">Von der Arztpraxis zur IT – Mein Weg in die digitale Transformation</p>
+      
+      <div class="about-content">
+        <img src="about-me.jpg" alt="Sarah Omonsky" class="about-img">
+        
+        <div class="about-text">
+          <p>Meine berufliche Laufbahn begann 2010 im Gesundheitswesen mit der Ausbildung zur Medizinischen Fachangestellten. Schon früh erkannte ich, dass mir das Aufgabenfeld allein nicht genügte – ich wollte mehr gestalten und bewegen. Deshalb investierte ich kontinuierlich in meine Weiterbildung.</p>
+          
+          <p><strong>Führung und Management mit Weitblick:</strong> Als Fachwirtin für ambulante medizinische Versorgung vertiefte ich mein Wissen in den Bereichen Praxismanagement, Personalführung und Qualitätssicherung. Diese Qualifikation ermöglichte mir nicht nur fachliche Tiefe, sondern auch einen strategischen Blick auf Prozesse und Strukturen.</p>
+          
+          <p><strong>Mehr als ein Jahrzehnt Erfahrung in einem anspruchsvollen Umfeld:</strong> Über zehn Jahre habe ich in einer Branche gearbeitet, in der Datenschutz, Compliance und Qualitätsstandards gelebte Praxis sind. Diese Erfahrung hat meinen Blick für Präzision, Verantwortung und die Bedeutung verlässlicher Abläufe geschärft.</p>
+          
+          <p><strong>Die Brücke zwischen Fachbereich und IT:</strong> Während meiner Tätigkeit im Gesundheitswesen wurde mir zunehmend bewusst: Viele Arbeitsabläufe könnten effizienter, transparenter und fehlerfreier gestaltet werden – durch Digitalisierung. Der Wunsch, nicht nur Prozesse zu verwalten, sondern sie aktiv zu transformieren, führte mich zur Entscheidung für eine Umschulung zur Kauffrau für Digitalisierungsmanagement.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <img src="bewerbungsfoto.jpg" alt="Sarah Omonsky">
-  </div>
-</header>
-
-<section class="container">
-  <div class="card">
-    <h2>Kassel</h2>
-    <p class="sub">Standortübersicht</p>
-
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps?q=Kassel,+Deutschland&z=11&output=embed"
-        width="100%"
-        height="360"
-        style="border:0"
-        loading="lazy">
-      </iframe>
+  <!-- Experience Timeline -->
+  <section id="experience">
+    <div class="container">
+      <h2><i class="fas fa-briefcase"></i>Mein beruflicher Werdegang</h2>
+      <p class="section-subtitle">Kontinuierliche Weiterentwicklung vom Gesundheitswesen zur Digitalisierung</p>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>01/2024 – 02/2026</h4>
+          <h3>Umschulung zur Kauffrau für Digitalisierungsmanagement</h3>
+          <p>Ausbildung mit Fokus auf digitale Geschäftsprozesse, Projektmanagement und IT-Systeme. Abschlussprojekt: OnboardME – Digitales Onboarding-System.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>2013 – 2022</h4>
+          <h3>Berufserfahrung im Gesundheitswesen</h3>
+          <p>Vielfältige Erfahrungen in verschiedenen Fachbereichen mit Schwerpunkt auf Praxismanagement, Prozessoptimierung und Qualitätssicherung in regulierten Umgebungen.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>04/2014 – 02/2017</h4>
+          <h3>Fachwirtin für ambulante medizinische Versorgung</h3>
+          <p>Weiterbildung in Praxismanagement, Personalführung, Qualitätsmanagement und betriebswirtschaftlichen Grundlagen.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>08/2010 – 07/2013</h4>
+          <h3>Ausbildung zur Medizinischen Fachangestellten</h3>
+          <p>Fundierte Ausbildung in medizinischer Assistenz, Patientenbetreuung und Praxisorganisation.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>08/2004 – 06/2009</h4>
+          <h3>Realschulabschluss</h3>
+          <p>Solide schulische Grundlage mit erfolgreichem Abschluss.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2025 Sarah Omonsky · Digitalisierungsmanagement
-</footer>
+  <!-- Project Section -->
+  <section id="project">
+    <div class="container">
+      <h2><i class="fas fa-rocket"></i>Mein Abschlussprojekt</h2>
+      
+      <div class="project-header">
+        <h3>OnboardME – Digitales Onboarding neu gedacht</h3>
+      </div>
 
-<script>
-function setLang(lang){
-  document.querySelectorAll('[data-lang]').forEach(el=>{
-    el.classList.remove('active');
-    if(el.getAttribute('data-lang')===lang){
-      el.classList.add('active');
-    }
-  });
-}
-</script>
+      <div class="project-content">
+        <p>OnboardME entstand aufgrund meiner eigenen Onboarding-Erfahrung. In vielen Unternehmen fehlt ein strukturierter, transparenter und einheitlicher Onboarding-Prozess. Dadurch geht wertvolle Zeit sowie die Motivation neuer Mitarbeitenden verloren. Deshalb habe ich ein System entwickelt, das diesen Prozess digital, klar und menschlich zugleich macht – ein Werkzeug, das Orientierung bietet und gleichzeitig moderne HR-Prozesse unterstützt.</p>
+
+        <p>Um diese Idee greifbar zu machen, entwickelte ich einen klickbaren Prototypen via FlutterFlow. Dieser zeigt, wie ein digital unterstütztes Onboarding-System aussehen kann, das sowohl für neue Mitarbeitende als auch für HR-Teams echte Mehrwerte schafft.</p>
+
+        <p>Das Ziel war, einen interaktiven Prototypen zu erschaffen, der sowohl den administrativen Aufwand reduziert als auch die emotionale Seite des Onboardings stärkt. Dabei standen Benutzerfreundlichkeit, Übersichtlichkeit und Automatisierung im Fokus.</p>
+
+        <div class="project-highlights">
+          <h4>Ergebnisse und Mehrwert</h4>
+          <ul>
+            <li>Zeitersparnis von bis zu 30 % im Onboarding-Prozess</li>
+            <li>Reduzierung manueller Abstimmungsfehler</li>
+            <li>Steigerung von Transparenz und Nutzerzufriedenheit</li>
+            <li>Automatische Fortschrittsverfolgung für HR und neue Mitarbeitende</li>
+            <li>Zentrale Dokumentenverwaltung mit Versionskontrolle</li>
+          </ul>
+        </div>
+
+        <div class="project-quote">
+          „OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden."
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item"><img src="screenshot1.jpg" alt="OnboardME Dashboard"></div>
+          <div class="portfolio-item"><img src="screenshot2.jpg" alt="OnboardME Aufgabenverwaltung"></div>
+          <div class="portfolio-item"><img src="screenshot3.jpg" alt="OnboardME Fortschrittsanzeige"></div>
+          <div class="portfolio-item"><img src="screenshot4.jpg" alt="OnboardME Dokumentenmanagement"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2><i class="fas fa-star"></i>Meine Kompetenzen</h2>
+      <p class="section-subtitle">Fachliche Expertise kombiniert mit praktischer Erfahrung</p>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fas fa-tasks"></i>
+          <h3>Projektmanagement & Prozessanalyse</h3>
+        </div>
+        
+        <div class="skill-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Technologieverständnis & Schnittstellenmanagement</h3>
+        </div>
+        
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <h3>Datenmanagement & Datenschutz</h3>
+        </div>
+        
+        <div class="skill-card">
+          <i class="fas fa-users"></i>
+          <h3>Organisation, Kommunikation & Teamarbeit</h3>
+        </div>
+        
+        <div class="skill-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Lösungsorientiertes Denken & Handeln</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2><i class="fas fa-envelope"></i>Kontakt</h2>
+      <p class="section-subtitle">Ich freue mich auf ein persönliches Kennenlernen</p>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <h3>E-Mail</h3>
+          <a href="mailto:sarah.omonsky@web.de">sarah.omonsky@web.de</a>
+        </div>
+        
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <h3>Telefon</h3>
+          <a href="tel:+491722318451">0172 / 2318451</a>
+        </div>
+      </div>
+      
+      <h2 style="margin-top: 4rem; margin-bottom: 2rem;"><i class="fas fa-map-marker-alt"></i>Standort</h2>
+      <div style="max-width: 900px; margin: 0 auto; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158023.68034943976!2d9.332932699999999!3d51.31359705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bb3f22f08408d1%3A0x421b1cb4288feb0!2sKassel!5e0!3m2!1sde!2sde!4v1234567890123!5m2!1sde!2sde" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>© 2025 Sarah Omonsky</strong></p>
+    <p>Kauffrau für Digitalisierungsmanagement</p>
+    <span class="availability">Verfügbar ab März 2026</span>
+  </footer>
+
+  <script>
+    // Smooth scrolling is handled by CSS
+  </script>
 
 </body>
 </html>
