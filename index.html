@@ -26,46 +26,24 @@
 
     html {
       scroll-behavior: smooth;
+
+      /* ✅ Hintergrundbild (PNG) – liegt im selben Ordner wie index.html */
+      background:
+        linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+        url("bg-portfolio.png") center / cover no-repeat fixed;
     }
 
-    /* ============================
-       ✅ HINTERGRUND (PNG)
-       ============================ */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text-dark);
       line-height: 1.6;
 
-      background-image: url("bg-portfolio.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-color: var(--bg-light); /* fallback */
-
+      /* ✅ wichtig: transparent, damit der html-Background sichtbar ist */
+      background: transparent;
       min-height: 100vh;
-      position: relative;
     }
 
-    /* optional: leichte Aufhellung, damit Text super lesbar bleibt */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(255,255,255,0.32);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Inhalte über Overlay */
-    body > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ============================
-       ✅ LOGO (neu)
-       ============================ */
+    /* ✅ Logo im Hero */
     .hero-logo {
       width: 120px;
       height: auto;
@@ -75,13 +53,11 @@
       opacity: 0.98;
     }
 
-    /* ============================
-       HERO (transparent, damit BG sichtbar)
-       ============================ */
+    /* ✅ Hero transparent (sonst übermalt er den Hintergrund) */
     .hero {
-      background: rgba(255,255,255,0.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.30);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       color: #1f2937;
       padding: 6rem 2rem;
       text-align: center;
@@ -113,18 +89,16 @@
       margin-right: auto;
     }
 
-    /* ============================
-       SECTIONS transparent
-       ============================ */
+    /* ✅ Sections transparent, damit Background sichtbar bleibt */
     section {
       padding: 5rem 2rem;
-      background: rgba(255,255,255,0.86);
-      backdrop-filter: blur(7px);
-      -webkit-backdrop-filter: blur(7px);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
 
     section:nth-child(even) {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.93);
     }
 
     .container {
@@ -334,13 +308,11 @@
       margin-bottom: 0.5rem;
     }
 
-    /* ============================
-       CONTACT transparent
-       ============================ */
+    /* ✅ Kontaktbereich transparent (sonst übermalt er wieder) */
     .contact-section {
-      background: rgba(255,255,255,0.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       color: var(--text-dark);
     }
 
@@ -413,7 +385,7 @@
       font-weight: 600;
     }
 
-    /* ✅ FIX: Media Query Klammern korrekt */
+    /* ✅ FIX: Media-Query korrekt geschlossen (dein Original hatte hier Klammer-Fehler) */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -447,7 +419,7 @@
         max-width: 250px !important;
       }
 
-      .hero-logo{
+      .hero-logo {
         width: 95px;
         margin-bottom: 1rem;
       }
@@ -459,7 +431,7 @@
   <section class="hero">
     <div class="container">
 
-      <!-- ✅ LOGO eingebaut -->
+      <!-- ✅ Logo -->
       <img src="Logoso.jpg" alt="Logo Sarah Omonsky" class="hero-logo">
 
       <p data-i18n="hero.topline" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem;">Schön, dass Sie mein Portfolio besuchen!</p>
@@ -483,10 +455,10 @@
   <section id="about">
     <div class="container">
       <h2><i class="fas fa-user"></i><span data-i18n="about.title">Lernen Sie mich besser kennen</span></h2>
-        
+
         <div style="position: relative; z-index: 2;">
           <div style="text-align: center; margin-bottom: 2rem;">
-            <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky" 
+            <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky"
                  style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
           </div>
 
@@ -549,16 +521,16 @@
 
       <div class="project-header">
         <h3 data-i18n="proj.header">OnboardME – Digitales Onboarding neu gedacht</h3>
-        
+
         <div style="text-align: center; margin: 2rem 0;">
-          <img src="obm.jpeg" alt="OnboardMe Projekt" 
+          <img src="obm.jpeg" alt="OnboardMe Projekt"
                style="width: 100%; max-width: 700px; height: auto; opacity: 0.5; border-radius: 12px;">
         </div>
       </div>
 
       <div class="project-content">
         <p data-i18n="proj.p1">Sie müssen sich OnboardMe nicht vorstellen – Sie können es selbst erleben. Im Video sehen Sie den Prototyp in Aktion.</p>
-        
+
         <div class="portfolio-grid">
           <div class="portfolio-item video-container" style="max-width: 450px; max-height: 70vh; margin: 0 auto;">
             <video controls preload="auto" style="width: 100%; height: auto; max-height: 70vh; display: block; background: #000; border-radius: 8px; object-fit: contain;">
@@ -621,7 +593,7 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
-        <img src="Bewerbungsbild1.jpg" alt="Sarah Omonsky Kontakt" 
+        <img src="Bewerbungsbild1.jpg" alt="Sarah Omonsky Kontakt"
              class="contact-hero-img"
              style="width: 100%; max-width: 350px; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.25);">
       </div>
@@ -777,4 +749,4 @@
   </script>
 
 </body>
-</html>
+            </html>
