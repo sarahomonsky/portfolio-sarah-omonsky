@@ -35,7 +35,6 @@
       background-color: var(--bg-light);
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #d4a5a5 0%, #e6c9c9 100%);
       color: #1f2937;
@@ -46,16 +45,6 @@
     .hero .container {
       max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .hero img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(255,255,255,0.8);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      margin-bottom: 2rem;
     }
 
     .hero h1 {
@@ -79,47 +68,6 @@
       margin-right: auto;
     }
 
-    .hero .cta-buttons {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.875rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background: white;
-      color: var(--text-dark);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text-dark);
-      border: 2px solid var(--text-dark);
-    }
-
-    .btn-secondary:hover {
-      background: white;
-      color: var(--text-dark);
-    }
-
-    /* Section Styles */
     section {
       padding: 5rem 2rem;
     }
@@ -153,7 +101,6 @@
       margin-bottom: 3rem;
     }
 
-    /* Timeline */
     .timeline {
       max-width: 900px;
       margin: 0 auto;
@@ -208,39 +155,6 @@
       line-height: 1.6;
     }
 
-    /* About Section */
-    .about-content {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 3rem;
-      align-items: start;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .about-img {
-      width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    .about-text h3 {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-text p {
-      margin-bottom: 1.5rem;
-      color: var(--text-light);
-      line-height: 1.8;
-    }
-
-    .about-text strong {
-      color: var(--text-dark);
-    }
-
-    /* Project Section */
     .project-header {
       text-align: center;
       max-width: 900px;
@@ -334,14 +248,6 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    /* Skills Section */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -377,7 +283,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Contact Section */
     .contact-section {
       background: linear-gradient(135deg, #d4a5a5 0%, #e6c9c9 100%);
       color: var(--text-dark);
@@ -430,11 +335,6 @@
       font-weight: 500;
     }
 
-    .contact-card p {
-      color: var(--text-dark);
-    }
-
-    /* Footer */
     footer {
       background: var(--primary-color);
       color: #000000;
@@ -456,7 +356,6 @@
       font-weight: 600;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -468,16 +367,6 @@
 
       .hero .tagline {
         font-size: 1rem;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .about-img {
-        max-width: 250px;
-        margin: 0 auto;
       }
 
       h2 {
@@ -496,12 +385,10 @@
         grid-template-columns: 1fr;
       }
 
-      /* Transparentes Bild auf Mobile ausblenden */
       img[alt="Sarah mit Tochter"] {
         display: none !important;
       }
 
-      /* Contact hero image responsive */
       .contact-hero-img {
         max-width: 250px !important;
       }
@@ -510,20 +397,19 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <p data-i18n="hero.topline" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem;">Meine Mission: Menschen helfen – früher in der Medizin, heute mit digitaler Transformation. Mein Ziel: Die Ressource unseres Lebens effektiv nutzen und vereinfachen.</p>
+      <p data-i18n="hero.topline" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem;">Schön, dass Sie mein Portfolio besuchen!</p>
       <h1 data-i18n="hero.name">Ich bin Sarah Omonsky</h1>
       <p data-i18n="hero.subtitle" class="subtitle">Kauffrau für Digitalisierungsmanagement</p>
+      <p data-i18n="hero.mission" class="tagline">Meine Mission: Menschen helfen – früher in der Medizin, heute mit digitaler Transformation. Mein Ziel: Die Ressource unseres Lebens effektiv nutzen und vereinfachen.</p>
 
-      <!-- Navigation Links -->
       <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-        <a data-i18n="nav.about" href="#about" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Über mich</a>
-        <a data-i18n="nav.experience" href="#experience" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Werdegang</a>
-        <a href="#project" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">OnboardME</a>
-        <a data-i18n="nav.skills" href="#skills" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Kompetenzen</a>
-        <a data-i18n="nav.contact" href="#contact" style="text-decoration: none; color: #000000; font-weight: 600; transition: color 0.3s;">Kontakt</a>
+        <a data-i18n="nav.about" href="#about" style="text-decoration: none; color: #000000; font-weight: 600;">Über mich</a>
+        <a data-i18n="nav.experience" href="#experience" style="text-decoration: none; color: #000000; font-weight: 600;">Werdegang</a>
+        <a href="#project" style="text-decoration: none; color: #000000; font-weight: 600;">OnboardME</a>
+        <a data-i18n="nav.skills" href="#skills" style="text-decoration: none; color: #000000; font-weight: 600;">Kompetenzen</a>
+        <a data-i18n="nav.contact" href="#contact" style="text-decoration: none; color: #000000; font-weight: 600;">Kontakt</a>
         <span style="color: #000000;">|</span>
         <a href="#" id="lang-de" style="text-decoration: none; color: var(--primary-color); font-weight: 700;">DE</a>
         <a href="#" id="lang-en" style="text-decoration: none; color: #6b7280; font-weight: 600; opacity: 0.5;">EN</a>
@@ -531,27 +417,20 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <h2><i class="fas fa-user"></i><span data-i18n="about.title">Lernen Sie mich besser kennen</span></h2>
       
-      <!-- Content Wrapper mit Position Relative -->
       <div style="position: relative; max-width: 900px; margin: 2rem auto;">
-        
-        <!-- Transparentes Hintergrundbild (absolute positioniert) -->
         <img src="Bewerbungsbild3.jpeg" alt="Sarah mit Tochter" 
-             style="position: absolute; right: -350px; top: 430px; width: 300px; height: auto; opacity: 0.2; border-radius: 8px; z-index: 1;">
+             style="position: absolute; right: -350px; top: 480px; width: 300px; height: auto; opacity: 0.2; border-radius: 8px; z-index: 1;">
         
-        <!-- Hauptcontent (normal flow, über dem Hintergrundbild) -->
         <div style="position: relative; z-index: 2;">
-          <!-- Hauptbild (groß) -->
           <div style="text-align: center; margin-bottom: 2rem;">
             <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky" 
                  style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
           </div>
 
-          <!-- Text -->
           <p data-i18n="about.subtitle" style="text-align: center; margin: 2rem 0; color: var(--text-light); font-size: 1.2rem;">Mein Name ist Sarah Omonsky, ich bin 32 und Mutter einer 5-jährigen Tochter.</p>
 
           <p data-i18n="about.p1" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;">Was mich schon mein ganzes Leben begleitet, ist ein starkes Bedürfnis nach Entwicklung. Stillstand macht mich nicht glücklich. Gerade als Mutter weiß ich, wie wichtig es ist, Verantwortung zu übernehmen. Durch Mut, Willen und Durchhaltevermögen entsteht Selbstverwirklichung. Wachstum bedeutet für mich, Neues zu lernen und mich weiterzuentwickeln – auch dann, wenn es unbequem ist. Genau so bin ich meinen beruflichen Weg gegangen: konsequent, wissbegierig und mit dem Anspruch, wirklich voranzukommen.</p>
@@ -566,7 +445,6 @@
     </div>
   </section>
 
-  <!-- Experience Timeline -->
   <section id="experience">
     <div class="container">
       <h2><i class="fas fa-briefcase"></i><span data-i18n="exp.title">Mein beruflicher Werdegang</span></h2>
@@ -606,7 +484,6 @@
     </div>
   </section>
 
-  <!-- Project Section -->
   <section id="project">
     <div class="container">
       <h2><i class="fas fa-rocket"></i><span data-i18n="proj.title">Mein IHK-Abschlussprojekt</span></h2>
@@ -622,7 +499,6 @@
           <div class="portfolio-item video-container" style="max-width: 450px; max-height: 70vh; margin: 0 auto;">
             <video controls preload="auto" style="width: 100%; height: auto; max-height: 70vh; display: block; background: #000; border-radius: 8px; object-fit: contain;">
               <source src="OnboardMe_Werbevideo.mp4" type="video/mp4">
-              Ihr Browser unterstützt die Videowiedergabe nicht.
             </video>
           </div>
         </div>
@@ -645,7 +521,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <h2><i class="fas fa-star"></i><span data-i18n="skills.title">Meine Kompetenzen</span></h2>
@@ -679,10 +554,8 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="container">
-      <!-- Hero Image über Kontakt -->
       <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
         <img src="Bewerbungsbild1.jpeg" alt="Sarah Omonsky Kontakt" 
              class="contact-hero-img"
@@ -714,14 +587,12 @@
           height="400"
           style="border:0;"
           allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy">
         </iframe>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p><strong>© 2025 Sarah Omonsky</strong></p>
     <p data-i18n="footer.role">Kauffrau für Digitalisierungsmanagement</p>
@@ -729,28 +600,26 @@
   </footer>
 
   <script>
-    // Store original German text once
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n]").forEach(function(el) {
       el.dataset.de = el.innerHTML;
     });
 
-    const translations = {
+    var translations = {
       en: {
-        "hero.topline": "My mission: Helping people – formerly in medicine, now with digital transformation. My goal: Using and simplifying the resource of our lives effectively.",
+        "hero.topline": "Nice to see you visiting my portfolio!",
         "hero.name": "I am Sarah Omonsky",
         "hero.subtitle": "Digitalization Management Specialist",
+        "hero.mission": "My mission: Helping people – formerly in medicine, now with digital transformation. My goal: Using and simplifying the resource of our lives effectively.",
         "nav.about": "About me",
         "nav.experience": "Career",
         "nav.skills": "Skills",
         "nav.contact": "Contact",
-
         "about.title": "Get to know me better",
         "about.subtitle": "My name is Sarah Omonsky, I'm 32 and mother of a 5-year-old daughter.",
         "about.p1": "What has accompanied me throughout my life is a strong need for development. Stagnation doesn't make me happy. As a mother, I know how important it is to take responsibility. Through courage, will and perseverance, self-realization emerges. Growth means learning something new and developing further – even when it's uncomfortable. That's exactly how I've pursued my professional path: consistently, eager to learn and with the ambition to really move forward.",
         "about.p2": "<strong>What drives me:</strong> Not just understanding things, but actively changing them. Creative and innovative approaches as well as the ability to act quickly in a solution-oriented manner are among my strengths. I'm satisfied when I see that my work has an impact – a process that works, a project that is successfully implemented, a structure that relieves people in everyday life.",
         "about.p3": "<strong>What's important to me:</strong> functioning collaboration, because successes are best celebrated as a team. I like to take responsibility, lead the way and persevere even when things get difficult. I can lead, support and integrate – depending on what the situation requires.",
         "about.p4": "<strong>My professional goal:</strong> As a mother, it's important to me to exemplify strength, self-confidence and determination. That's exactly why I've repeatedly made professional decisions that weren't the easy way. My goal is to arrive where my work counts and where I can be an effective puzzle piece in digital transformation with my contribution.",
-
         "exp.title": "My professional journey",
         "exp.subtitle": "From medical practice to IT – my path into digital transformation",
         "exp.item1.h": "Retraining as a Digitalization Management Specialist",
@@ -763,7 +632,6 @@
         "exp.item4.p": "Solid training in medical assistance, patient care and practice organization.",
         "exp.item5.h": "Secondary school certificate",
         "exp.item5.p": "A solid educational foundation successfully completed.",
-
         "proj.title": "My IHK final project",
         "proj.header": "OnboardME – rethinking digital onboarding",
         "proj.p1": "You don't have to imagine OnboardMe – you can experience it yourself. In the video you can see the prototype in action.",
@@ -774,7 +642,6 @@
         "proj.li4": "UI/UX Design – designing user-friendly interfaces with a focus on usability",
         "proj.li5": "Process modeling – structuring complex workflows and digitally mapping them",
         "proj.quote": ""OnboardME is the missing puzzle piece in modern onboarding – it creates the structure and digital efficiency that new employees need to seamlessly become part of the company."",
-
         "skills.title": "My skills",
         "skills.subtitle": "Professional expertise combined with practical experience",
         "skills.s1": "Project management & process analysis",
@@ -783,29 +650,24 @@
         "skills.s4": "Organization, communication & teamwork",
         "skills.s5": "Solution-oriented thinking & action",
         "skills.s6": "Perseverance & determination",
-
         "contact.title": "Contact",
         "contact.subtitle": "I look forward to getting to know you personally",
         "contact.email": "Email",
         "contact.phone": "Phone",
         "contact.location": "Location",
-
         "footer.role": "Digitalization Management Specialist",
         "footer.availability": "Available from March 2026"
       }
     };
 
     function setLangButtonState(lang) {
-      const deBtn = document.getElementById("lang-de");
-      const enBtn = document.getElementById("lang-en");
-
+      var deBtn = document.getElementById("lang-de");
+      var enBtn = document.getElementById("lang-en");
       if (!deBtn || !enBtn) return;
-
       if (lang === "en") {
         deBtn.style.color = "#6b7280";
         deBtn.style.opacity = "0.5";
         deBtn.style.fontWeight = "600";
-
         enBtn.style.color = "var(--primary-color)";
         enBtn.style.opacity = "1";
         enBtn.style.fontWeight = "700";
@@ -813,7 +675,6 @@
         deBtn.style.color = "var(--primary-color)";
         deBtn.style.opacity = "1";
         deBtn.style.fontWeight = "700";
-
         enBtn.style.color = "#6b7280";
         enBtn.style.opacity = "0.5";
         enBtn.style.fontWeight = "600";
@@ -821,38 +682,33 @@
     }
 
     function switchLanguage(lang) {
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-
+      document.querySelectorAll("[data-i18n]").forEach(function(el) {
+        var key = el.getAttribute("data-i18n");
         if (lang === "de") {
           el.innerHTML = el.dataset.de;
           return;
         }
-
-        const translated = translations[lang] && translations[lang][key];
+        var translated = translations[lang] && translations[lang][key];
         if (translated) {
           el.innerHTML = translated;
         } else {
           el.innerHTML = el.dataset.de;
         }
       });
-
       document.documentElement.lang = (lang === "en") ? "en" : "de";
       setLangButtonState(lang);
     }
 
-    // Button events
-    document.getElementById("lang-de").addEventListener("click", (e) => {
+    document.getElementById("lang-de").addEventListener("click", function(e) {
       e.preventDefault();
       switchLanguage("de");
     });
 
-    document.getElementById("lang-en").addEventListener("click", (e) => {
+    document.getElementById("lang-en").addEventListener("click", function(e) {
       e.preventDefault();
       switchLanguage("en");
     });
 
-    // Default state: DE
     setLangButtonState("de");
   </script>
 
