@@ -496,20 +496,9 @@
         grid-template-columns: 1fr;
       }
 
-      /* About Section auf Mobile untereinander */
-      section#about div[style*="display: flex"] {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      
       /* Transparentes Bild auf Mobile ausblenden */
       img[alt="Sarah mit Tochter"] {
         display: none !important;
-      }
-      
-      /* Hauptbild auf Mobile zentriert */
-      section#about img[alt="Sarah Omonsky"] {
-        max-width: 100% !important;
       }
 
       /* Contact hero image responsive */
@@ -549,11 +538,15 @@
     <div class="container">
       <h2><i class="fas fa-user"></i><span data-i18n="about.title">Lernen Sie mich besser kennen</span></h2>
       
-      <!-- Layout: Hauptbild + Text links, Transparentes Bild rechts -->
-      <div style="display: flex; gap: 3rem; align-items: flex-start; max-width: 1200px; margin: 2rem auto;">
+      <!-- Content Wrapper mit Position Relative -->
+      <div style="position: relative; max-width: 900px; margin: 2rem auto;">
         
-        <!-- Linke Seite: Hauptbild + Text -->
-        <div style="flex: 1;">
+        <!-- Transparentes Hintergrundbild (absolute positioniert) -->
+        <img src="Bewerbungsbild3.jpeg" alt="Sarah mit Tochter" 
+             style="position: absolute; right: -350px; top: 430px; width: 300px; height: auto; opacity: 0.2; border-radius: 8px; z-index: 1;">
+        
+        <!-- Hauptcontent (normal flow, über dem Hintergrundbild) -->
+        <div style="position: relative; z-index: 2;">
           <!-- Hauptbild (groß) -->
           <div style="text-align: center; margin-bottom: 2rem;">
             <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky" 
@@ -570,12 +563,6 @@
           <p data-i18n="about.p3" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Was mir wichtig ist:</strong> funktionierende Zusammenarbeit, denn Erfolge feiert man am besten im Team. Ich übernehme gern Verantwortung, gehe voran und halte auch dann durch, wenn es schwierig wird. Dabei kann ich führen, unterstützen und mich einordnen – je nachdem, was die Situation erfordert.</p>
 
           <p data-i18n="about.p4" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Mein berufliches Ziel:</strong> Als Mutter ist es mir wichtig, Stärke, Selbstvertrauen und Zielstrebigkeit vorzuleben. Genau deshalb habe ich beruflich immer wieder Entscheidungen getroffen, die nicht der einfache Weg waren. Mein Ziel ist es, dort anzukommen, wo meine Arbeit zählt und ich mit meinem Beitrag ein wirksames Puzzleteil in der digitalen Transformation sein kann.</p>
-        </div>
-        
-        <!-- Transparentes Bild mit Tochter (rechts, auf Höhe des Textes) -->
-        <div style="flex-shrink: 0; margin-top: 480px;">
-          <img src="Bewerbungsbild3.jpeg" alt="Sarah mit Tochter" 
-               style="width: 300px; height: auto; opacity: 0.2; border-radius: 8px;">
         </div>
       </div>
     </div>
@@ -829,7 +816,7 @@
       } else {
         deBtn.style.color = "var(--primary-color)";
         deBtn.style.opacity = "1";
-        deBtn.style.fontWeight = "700";
+        deBtn.style.font-weight = "700";
 
         enBtn.style.color = "#6b7280";
         enBtn.style.opacity = "0.5";
