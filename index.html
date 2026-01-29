@@ -344,7 +344,7 @@
     /* Skills Section */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmin(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
@@ -496,9 +496,20 @@
         grid-template-columns: 1fr;
       }
 
-      /* Hide transparent image on mobile */
+      /* About Section auf Mobile untereinander */
+      section#about div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      
+      /* Transparentes Bild auf Mobile ausblenden */
       img[alt="Sarah mit Tochter"] {
         display: none !important;
+      }
+      
+      /* Hauptbild auf Mobile zentriert */
+      section#about img[alt="Sarah Omonsky"] {
+        max-width: 100% !important;
       }
 
       /* Contact hero image responsive */
@@ -538,28 +549,34 @@
     <div class="container">
       <h2><i class="fas fa-user"></i><span data-i18n="about.title">Lernen Sie mich besser kennen</span></h2>
       
-      <div style="position: relative; margin: 2rem 0;">
-        <!-- Transparentes Bild mit Tochter (links) -->
-        <img src="Bewerbungsbild3.jpeg" alt="Sarah mit Tochter" 
-             style="position: absolute; left: 0; top: 0; width: 200px; height: auto; opacity: 0.4; z-index: 1; border-radius: 8px;">
+      <!-- Layout: Transparentes Bild links, Rest rechts -->
+      <div style="display: flex; gap: 3rem; align-items: flex-start; max-width: 1200px; margin: 2rem auto;">
         
-        <!-- Hauptbild (rechts/zentriert) -->
-        <div style="display: flex; justify-content: center; position: relative; z-index: 2;">
-          <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky" 
-               style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+        <!-- Transparentes Bild mit Tochter (links, größer, transparenter) -->
+        <div style="flex-shrink: 0;">
+          <img src="Bewerbungsbild3.jpeg" alt="Sarah mit Tochter" 
+               style="width: 300px; height: auto; opacity: 0.3; border-radius: 8px;">
         </div>
-      </div>
+        
+        <!-- Rechte Seite: Hauptbild + Text -->
+        <div style="flex: 1;">
+          <!-- Hauptbild (groß) -->
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="bewerbungsbild2.jpeg" alt="Sarah Omonsky" 
+                 style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+          </div>
 
-      <p data-i18n="about.subtitle" style="text-align: center; margin: 2rem 0; color: var(--text-light); font-size: 1.2rem;">Mein Name ist Sarah Omonsky, ich bin 32 und Mutter einer 5-jährigen Tochter.</p>
+          <!-- Text -->
+          <p data-i18n="about.subtitle" style="text-align: center; margin: 2rem 0; color: var(--text-light); font-size: 1.2rem;">Mein Name ist Sarah Omonsky, ich bin 32 und Mutter einer 5-jährigen Tochter.</p>
 
-      <div style="max-width: 900px; margin: 0 auto;">
-        <p data-i18n="about.p1" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;">Was mich schon mein ganzes Leben begleitet, ist ein starkes Bedürfnis nach Entwicklung. Stillstand macht mich nicht glücklich. Gerade als Mutter weiß ich, wie wichtig es ist, Verantwortung zu übernehmen. Durch Mut, Willen und Durchhaltevermögen entsteht Selbstverwirklichung. Wachstum bedeutet für mich, Neues zu lernen und mich weiterzuentwickeln – auch dann, wenn es unbequem ist. Genau so bin ich meinen beruflichen Weg gegangen: konsequent, wissbegierig und mit dem Anspruch, wirklich voranzukommen.</p>
+          <p data-i18n="about.p1" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;">Was mich schon mein ganzes Leben begleitet, ist ein starkes Bedürfnis nach Entwicklung. Stillstand macht mich nicht glücklich. Gerade als Mutter weiß ich, wie wichtig es ist, Verantwortung zu übernehmen. Durch Mut, Willen und Durchhaltevermögen entsteht Selbstverwirklichung. Wachstum bedeutet für mich, Neues zu lernen und mich weiterzuentwickeln – auch dann, wenn es unbequem ist. Genau so bin ich meinen beruflichen Weg gegangen: konsequent, wissbegierig und mit dem Anspruch, wirklich voranzukommen.</p>
 
-        <p data-i18n="about.p2" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Was mich antreibt:</strong> Dinge nicht nur zu verstehen, sondern sie aktiv zu verändern. Kreative und innovative Ansätze sowie die Fähigkeit, schnell lösungsorientiert zu handeln, gehören zu meinen Stärken. Zufrieden bin ich dann, wenn ich sehe, dass meine Arbeit Wirkung hat – ein Prozess, der funktioniert, ein Projekt, das erfolgreich umgesetzt wird, eine Struktur, die Menschen im Alltag entlastet.</p>
+          <p data-i18n="about.p2" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Was mich antreibt:</strong> Dinge nicht nur zu verstehen, sondern sie aktiv zu verändern. Kreative und innovative Ansätze sowie die Fähigkeit, schnell lösungsorientiert zu handeln, gehören zu meinen Stärken. Zufrieden bin ich dann, wenn ich sehe, dass meine Arbeit Wirkung hat – ein Prozess, der funktioniert, ein Projekt, das erfolgreich umgesetzt wird, eine Struktur, die Menschen im Alltag entlastet.</p>
 
-        <p data-i18n="about.p3" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Was mir wichtig ist:</strong> funktionierende Zusammenarbeit, denn Erfolge feiert man am besten im Team. Ich übernehme gern Verantwortung, gehe voran und halte auch dann durch, wenn es schwierig wird. Dabei kann ich führen, unterstützen und mich einordnen – je nachdem, was die Situation erfordert.</p>
+          <p data-i18n="about.p3" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Was mir wichtig ist:</strong> funktionierende Zusammenarbeit, denn Erfolge feiert man am besten im Team. Ich übernehme gern Verantwortung, gehe voran und halte auch dann durch, wenn es schwierig wird. Dabei kann ich führen, unterstützen und mich einordnen – je nachdem, was die Situation erfordert.</p>
 
-        <p data-i18n="about.p4" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Mein berufliches Ziel:</strong> Als Mutter ist es mir wichtig, Stärke, Selbstvertrauen und Zielstrebigkeit vorzuleben. Genau deshalb habe ich beruflich immer wieder Entscheidungen getroffen, die nicht der einfache Weg waren. Mein Ziel ist es, dort anzukommen, wo meine Arbeit zählt und ich mit meinem Beitrag ein wirksames Puzzleteil in der digitalen Transformation sein kann.</p>
+          <p data-i18n="about.p4" style="margin-bottom: 1.5rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--text-dark);">Mein berufliches Ziel:</strong> Als Mutter ist es mir wichtig, Stärke, Selbstvertrauen und Zielstrebigkeit vorzuleben. Genau deshalb habe ich beruflich immer wieder Entscheidungen getroffen, die nicht der einfache Weg waren. Mein Ziel ist es, dort anzukommen, wo meine Arbeit zählt und ich mit meinem Beitrag ein wirksames Puzzleteil in der digitalen Transformation sein kann.</p>
+        </div>
       </div>
     </div>
   </section>
