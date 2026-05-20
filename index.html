@@ -102,7 +102,7 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 5rem 0 3.5rem;
+      padding: 5rem 0;
       background:
         linear-gradient(135deg, rgba(17,18,19,0.97), rgba(36,37,40,0.95)),
         radial-gradient(circle at 50% 10%, rgba(200,164,106,0.18), transparent 28rem);
@@ -117,6 +117,15 @@
 
     .hero-content {
       text-align: left;
+    }
+
+    .hero-logo {
+      width: 90px;
+      height: auto;
+      display: block;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 10px 24px rgba(200,164,106,0.22));
+      opacity: 0.95;
     }
 
     .hero .topline {
@@ -148,10 +157,37 @@
 
     .hero .tagline {
       font-size: 1.08rem;
-      margin-bottom: 0;
+      margin-bottom: 2.3rem;
       color: var(--text-light);
       max-width: 680px;
       line-height: 1.8;
+    }
+
+    .hero-nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hero-nav a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.55rem 0.85rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    .hero-nav a:hover,
+    .hero-nav a.active-lang {
+      color: var(--accent-color);
+      border-color: var(--border-color);
+      background: rgba(200, 164, 106, 0.08);
     }
 
     .hero-image-card {
@@ -176,37 +212,6 @@
       border: 1px solid rgba(200,164,106,0.18);
       border-radius: 1rem;
       pointer-events: none;
-    }
-
-    .hero-nav {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(200,164,106,0.15);
-    }
-
-    .hero-nav a {
-      text-decoration: none;
-      color: var(--text-light);
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.55rem 0.85rem;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-    }
-
-    .hero-nav a:hover,
-    .hero-nav a.active-lang {
-      color: var(--accent-color);
-      border-color: var(--border-color);
-      background: rgba(200, 164, 106, 0.08);
     }
 
     section {
@@ -492,9 +497,21 @@
         radial-gradient(circle at top, rgba(200,164,106,0.14), transparent 30rem);
     }
 
-    .contact-headline {
-      text-align: center;
+    .contact-top {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 3rem;
+      align-items: center;
       margin-bottom: 3rem;
+    }
+
+    .contact-hero-img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 1.2rem;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+      border: 1px solid rgba(200,164,106,0.2);
     }
 
     .contact-grid {
@@ -587,12 +604,19 @@
 
     @media (max-width: 900px) {
       .hero-grid,
-      .about-layout {
+      .about-layout,
+      .contact-top {
         grid-template-columns: 1fr;
       }
 
-      .hero-content {
+      .hero-content,
+      .contact-top {
         text-align: center;
+      }
+
+      .hero-logo {
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .hero-nav {
@@ -603,6 +627,10 @@
         position: relative;
         top: 0;
         max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .contact-hero-img {
         margin: 0 auto;
       }
     }
@@ -648,6 +676,10 @@
       .contact-card {
         padding: 1.5rem;
       }
+
+      .contact-hero-img {
+        max-width: 250px !important;
+      }
     }
   </style>
 </head>
@@ -656,31 +688,32 @@
 
   <section class="hero">
     <div class="container">
-
       <div class="hero-grid">
         <div class="hero-content">
+
+          <img src="Logoso.jpg" alt="Logo Sarah Omonsky" class="hero-logo">
+
           <p data-i18n="hero.topline" class="topline">Schön, dass Sie mein Portfolio besuchen!</p>
           <h1 data-i18n="hero.name">Ich bin Sarah Omonsky</h1>
           <div class="gold-line"></div>
           <p data-i18n="hero.subtitle" class="subtitle">Kauffrau für Digitalisierungsmanagement</p>
           <p data-i18n="hero.mission" class="tagline">Meine Mission: Menschen helfen – früher in der Medizin, heute mit digitaler Transformation. Mein Ziel: Die Ressource unseres Lebens effektiv nutzen und vereinfachen.</p>
+
+          <div class="hero-nav">
+            <a data-i18n="nav.about" href="#about">Über mich</a>
+            <a data-i18n="nav.experience" href="#experience">Werdegang</a>
+            <a href="#project">OnboardME</a>
+            <a data-i18n="nav.skills" href="#skills">Kompetenzen</a>
+            <a data-i18n="nav.contact" href="#contact">Kontakt</a>
+            <a href="#" id="lang-de" class="active-lang">DE</a>
+            <a href="#" id="lang-en">EN</a>
+          </div>
         </div>
 
         <div class="hero-image-card">
           <img src="Bewerbungsbild1.jpeg" alt="Sarah Omonsky">
         </div>
       </div>
-
-      <div class="hero-nav">
-        <a data-i18n="nav.about" href="#about">Über mich</a>
-        <a data-i18n="nav.experience" href="#experience">Werdegang</a>
-        <a href="#project">OnboardME</a>
-        <a data-i18n="nav.skills" href="#skills">Kompetenzen</a>
-        <a data-i18n="nav.contact" href="#contact">Kontakt</a>
-        <a href="#" id="lang-de" class="active-lang">DE</a>
-        <a href="#" id="lang-en">EN</a>
-      </div>
-
     </div>
   </section>
 
@@ -754,6 +787,7 @@
 
       <div class="project-header">
         <h3 data-i18n="proj.header">OnboardME – Digitales Onboarding neu gedacht</h3>
+
         <img src="obm.jpeg" alt="OnboardMe Projekt" class="project-image">
       </div>
 
@@ -827,9 +861,13 @@
 
   <section id="contact" class="contact-section">
     <div class="container">
-      <div class="contact-headline">
-        <h2><i class="fas fa-envelope"></i><span data-i18n="contact.title">Kontakt</span></h2>
-        <p data-i18n="contact.subtitle" class="section-subtitle">Ich freue mich auf ein persönliches Kennenlernen</p>
+      <div class="contact-top">
+        <img src="Bewerbungsbild1.jpeg" alt="Sarah Omonsky Kontakt" class="contact-hero-img">
+
+        <div>
+          <h2><i class="fas fa-envelope"></i><span data-i18n="contact.title">Kontakt</span></h2>
+          <p data-i18n="contact.subtitle" class="section-subtitle">Ich freue mich auf ein persönliches Kennenlernen</p>
+        </div>
       </div>
 
       <div class="contact-grid">
