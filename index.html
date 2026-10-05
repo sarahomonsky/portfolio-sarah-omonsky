@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio – Sarah Omonsky</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -43,9 +44,11 @@ body:before{
   inset:0;
   pointer-events:none;
   opacity:.15;
+
   background-image:
     linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+
   background-size:42px 42px;
 }
 
@@ -60,6 +63,7 @@ section:before{
   position:absolute;
   inset:0;
   pointer-events:none;
+
   background:
     radial-gradient(circle at 15% 15%,rgba(200,164,106,.08),transparent 24rem),
     radial-gradient(circle at 85% 90%,rgba(255,255,255,.04),transparent 26rem);
@@ -100,14 +104,22 @@ h2 i{
 }
 
 
+/* ========================================================= */
 /* HERO */
+/* ========================================================= */
 
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   padding:5rem 0 3rem;
-  background:linear-gradient(135deg,rgba(17,18,19,.97),rgba(36,37,40,.95));
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17,18,19,.97),
+      rgba(36,37,40,.95)
+    );
 }
 
 .hero-grid{
@@ -121,7 +133,6 @@ h2 i{
   text-align:left;
 }
 
-/* GEÄNDERT: obere Zeile mittig */
 .topline{
   color:var(--gold-light);
   text-transform:uppercase;
@@ -154,11 +165,13 @@ h2 i{
 }
 
 .hero-image-card{
-  background:linear-gradient(
-    135deg,
-    rgba(200,164,106,.22),
-    rgba(255,255,255,.04)
-  );
+  background:
+    linear-gradient(
+      135deg,
+      rgba(200,164,106,.22),
+      rgba(255,255,255,.04)
+    );
+
   padding:1px;
   border-radius:1.4rem;
   box-shadow:0 28px 80px rgba(0,0,0,.45);
@@ -176,19 +189,25 @@ h2 i{
   flex-wrap:wrap;
   justify-content:center;
   align-items:center;
+
   margin-top:3rem;
   padding-top:2rem;
+
   border-top:1px solid rgba(200,164,106,.15);
 }
 
 .hero-nav a{
   text-decoration:none;
   color:var(--muted);
+
   font-weight:600;
   font-size:.9rem;
+
   text-transform:uppercase;
   letter-spacing:.05em;
+
   padding:.55rem .85rem;
+
   border:1px solid transparent;
   border-radius:999px;
 }
@@ -201,13 +220,15 @@ h2 i{
 }
 
 
+/* ========================================================= */
 /* ABOUT */
+/* ========================================================= */
 
-/* GEÄNDERT: Video über Text statt links daneben */
 .about-layout{
   display:grid;
   grid-template-columns:1fr;
   gap:2rem;
+
   max-width:1000px;
   margin:3rem auto 0;
 }
@@ -215,11 +236,15 @@ h2 i{
 .portrait-frame{
   background:none;
   padding:0;
+
   border-radius:1.2rem;
   box-shadow:none;
+
   height:fit-content;
+
   width:100%;
   max-width:900px;
+
   margin:0 auto;
 }
 
@@ -235,13 +260,17 @@ h2 i{
 .skill-card,
 .contact-card,
 .project-highlights{
-  background:linear-gradient(
-    145deg,
-    rgba(32,33,36,.92),
-    rgba(21,22,23,.94)
-  );
+  background:
+    linear-gradient(
+      145deg,
+      rgba(32,33,36,.92),
+      rgba(21,22,23,.94)
+    );
+
   border:1px solid rgba(200,164,106,.18);
-  box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.25);
 }
 
 .content-card{
@@ -264,57 +293,79 @@ strong{
 }
 
 
+/* ========================================================= */
 /* TIMELINE */
+/* ========================================================= */
 
 .timeline{
   max-width:940px;
   margin:3rem auto 0;
+
   position:relative;
+
   padding-left:2.2rem;
 }
 
 .timeline:before{
   content:"";
+
   position:absolute;
+
   left:0;
   top:0;
   bottom:0;
+
   width:1px;
-  background:linear-gradient(
-    180deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
 }
 
 .timeline-item{
   position:relative;
+
   margin-bottom:2rem;
+
   padding:1.7rem 1.8rem;
+
   border-radius:1rem;
 }
 
 .timeline-item:before{
   content:"";
+
   position:absolute;
+
   left:-2.75rem;
   top:1.9rem;
+
   width:.85rem;
   height:.85rem;
+
   border-radius:50%;
+
   background:var(--gold);
-  box-shadow:0 0 0 6px rgba(200,164,106,.13);
+
+  box-shadow:
+    0 0 0 6px rgba(200,164,106,.13);
 }
 
 .timeline-item h4{
   color:var(--gold-light);
+
   font-size:.92rem;
+
   margin-bottom:.45rem;
 }
 
 .timeline-item h3{
   font-size:1.25rem;
+
   margin-bottom:.45rem;
 }
 
@@ -323,26 +374,39 @@ strong{
 }
 
 
+/* ========================================================= */
 /* PROJECT */
+/* ========================================================= */
 
 .project-header{
   text-align:center;
+
   max-width:920px;
+
   margin:0 auto 3rem;
 }
 
 .project-header h3{
   color:var(--gold-light);
-  font-size:clamp(1.55rem,3vw,2.25rem);
+
+  font-size:
+    clamp(1.55rem,3vw,2.25rem);
+
   margin-bottom:1.5rem;
 }
 
 .project-image{
   width:100%;
   max-width:760px;
+
   border-radius:1.2rem;
-  border:1px solid rgba(200,164,106,.16);
-  box-shadow:0 18px 55px rgba(0,0,0,.3);
+
+  border:
+    1px solid rgba(200,164,106,.16);
+
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.3);
+
   opacity:.78;
 }
 
@@ -358,35 +422,51 @@ strong{
 
 .portfolio-grid{
   display:grid;
+
   grid-template-columns:1fr;
+
   margin-top:3rem;
 }
 
 .portfolio-item{
   max-width:450px;
+
   margin:auto;
+
   border-radius:1.2rem;
+
   overflow:hidden;
-  background:linear-gradient(
-    135deg,
-    rgba(200,164,106,.2),
-    rgba(255,255,255,.05)
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(200,164,106,.2),
+      rgba(255,255,255,.05)
+    );
+
   padding:1px;
-  box-shadow:0 18px 55px rgba(0,0,0,.35);
+
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.35);
 }
 
 video{
   width:100%;
   display:block;
+
   border-radius:1.2rem;
+
   background:#000;
 }
 
 .project-highlights{
   padding:2rem;
+
   border-radius:1.2rem;
-  border-left:4px solid var(--gold);
+
+  border-left:
+    4px solid var(--gold);
+
   margin:2.5rem 0;
 }
 
@@ -400,55 +480,81 @@ video{
 
 .project-highlights li{
   color:var(--muted);
+
   padding:.6rem 0;
+
   display:flex;
+
   gap:.8rem;
 }
 
 .project-highlights li:before{
   content:"✓";
+
   color:var(--gold-light);
+
   font-weight:bold;
 }
 
 .project-quote{
   text-align:center;
+
   font-style:italic;
-  background:rgba(200,164,106,.08);
-  border:1px solid rgba(200,164,106,.22);
+
+  background:
+    rgba(200,164,106,.08);
+
+  border:
+    1px solid rgba(200,164,106,.22);
+
   padding:2rem;
+
   border-radius:1.2rem;
+
   margin:2rem 0;
 }
 
 
+/* ========================================================= */
 /* SKILLS */
+/* ========================================================= */
 
-/* GEÄNDERT: 4 Kästen nebeneinander */
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+
+  grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
   gap:1.4rem;
+
   max-width:1200px;
+
   margin:3rem auto 0;
+
   align-items:stretch;
 }
 
 .skill-card{
   text-align:center;
+
   padding:2rem 1.25rem;
+
   border-radius:1.15rem;
+
   height:100%;
 }
 
 .skill-card i{
   font-size:2.6rem;
+
   color:var(--gold-light);
+
   margin-bottom:1rem;
 }
 
 .skill-card h3{
   font-size:1.05rem;
+
   margin-bottom:1rem;
 }
 
@@ -457,64 +563,98 @@ video{
 }
 
 
+/* ========================================================= */
 /* CONTACT */
+/* ========================================================= */
 
 .contact-headline{
   text-align:center;
+
   margin-bottom:3rem;
 }
 
 .contact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
   gap:1.5rem;
+
   max-width:900px;
+
   margin:auto;
 }
 
 .contact-card{
   text-align:center;
+
   padding:2rem;
+
   border-radius:1.2rem;
 }
 
 .contact-card i{
   font-size:2.2rem;
+
   color:var(--gold-light);
+
   margin-bottom:1rem;
 }
 
 .contact-card a{
   color:var(--muted);
+
   text-decoration:none;
+
   word-break:break-word;
 }
 
 .map-frame{
   max-width:900px;
+
   margin:auto;
+
   border-radius:1.2rem;
+
   overflow:hidden;
-  border:1px solid rgba(200,164,106,.22);
-  box-shadow:0 18px 55px rgba(0,0,0,.35);
+
+  border:
+    1px solid rgba(200,164,106,.22);
+
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.35);
 }
 
 iframe{
   width:100%;
+
   height:400px;
+
   border:0;
-  filter:grayscale(.9) invert(.88) contrast(.9);
+
+  filter:
+    grayscale(.9)
+    invert(.88)
+    contrast(.9);
 }
 
 
+/* ========================================================= */
 /* FOOTER */
+/* ========================================================= */
 
 footer{
   text-align:center;
+
   background:#0d0e0f;
+
   color:var(--muted);
+
   padding:2.5rem 1rem;
-  border-top:1px solid rgba(200,164,106,.22);
+
+  border-top:
+    1px solid rgba(200,164,106,.22);
 }
 
 footer strong{
@@ -523,22 +663,34 @@ footer strong{
 
 .availability{
   display:inline-block;
+
   margin-top:1rem;
+
   padding:.55rem 1.5rem;
+
   border-radius:50px;
-  background:rgba(200,164,106,.1);
-  border:1px solid rgba(200,164,106,.28);
+
+  background:
+    rgba(200,164,106,.1);
+
+  border:
+    1px solid rgba(200,164,106,.28);
+
   color:var(--gold-light);
+
   font-weight:600;
 }
 
 
+/* ========================================================= */
 /* RESPONSIVE */
+/* ========================================================= */
 
 @media(max-width:1100px){
 
   .skills-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
   }
 
 }
@@ -584,6 +736,7 @@ footer strong{
 }
 
 </style>
+
 </head>
 
 
@@ -598,11 +751,16 @@ footer strong{
 
   <div class="container">
 
-    <p class="topline" data-i18n="hero.topline">
+    <p
+      class="topline"
+      data-i18n="hero.topline"
+    >
       Schön, dass Sie mehr über mich und meinen beruflichen Weg erfahren möchten.
     </p>
 
+
     <div class="hero-grid">
+
 
       <div class="hero-content">
 
@@ -612,7 +770,10 @@ footer strong{
 
         <div class="gold-line"></div>
 
-        <p class="subtitle" data-i18n="hero.subtitle">
+        <p
+          class="subtitle"
+          data-i18n="hero.subtitle"
+        >
           Kauffrau für Digitalisierungsmanagement, Fachwirtin für ambulante medizinische Versorgung und DEKRA-zertifizierte Fachfrau für Projektmanagement.
         </p>
 
@@ -622,11 +783,14 @@ footer strong{
       <div>
 
         <div class="hero-image-card">
+
           <img
             src="Bewerbungsbild1.jpeg"
             alt="Sarah Omonsky"
           >
+
         </div>
+
 
         <p
           class="tagline"
@@ -638,40 +802,67 @@ footer strong{
 
       </div>
 
+
     </div>
 
 
     <div class="hero-nav">
 
-      <a href="#about" data-i18n="nav.about">
+      <a
+        href="#about"
+        data-i18n="nav.about"
+      >
         Über mich
       </a>
 
-      <a href="#experience" data-i18n="nav.experience">
+
+      <a
+        href="#experience"
+        data-i18n="nav.experience"
+      >
         Werdegang
       </a>
+
 
       <a href="#project">
         OnboardME
       </a>
 
-      <a href="#skills" data-i18n="nav.skills">
+
+      <a
+        href="#skills"
+        data-i18n="nav.skills"
+      >
         Kompetenzen
       </a>
 
-      <a href="#contact" data-i18n="nav.contact">
+
+      <a
+        href="#contact"
+        data-i18n="nav.contact"
+      >
         Kontakt
       </a>
 
-      <a href="#" id="lang-de" class="active-lang">
+
+      <a
+        href="#"
+        id="lang-de"
+        class="active-lang"
+      >
         DE
       </a>
 
-      <a href="#" id="lang-en">
+
+      <a
+        href="#"
+        id="lang-en"
+      >
         EN
       </a>
 
     </div>
+
 
   </div>
 
@@ -686,6 +877,7 @@ footer strong{
 <section id="about">
 
   <div class="container">
+
 
     <h2>
 
@@ -718,29 +910,36 @@ footer strong{
       </div>
 
 
-      <!-- PERSÖNLICHER TEXT -->
+      <!-- TEXT -->
 
       <div class="content-card">
+
 
         <p data-i18n="about.p1">
           Privat interessiere ich mich für vieles, was mit Technik, Gestaltung und praktischen Lösungen zu tun hat. Ich beschäftige mich gern mit Autos, digitalen Anwendungen oder neuen technischen Möglichkeiten – einfach, weil ich verstehen möchte, wie Dinge funktionieren.
         </p>
 
+
         <p data-i18n="about.p2">
           Gleichzeitig liebe ich Inneneinrichtung und gebe alten Möbeln gern eine zweite Chance oder sogar eine neue Funktion. Dieses <strong>„Was könnte man daraus machen?“</strong> beschreibt mich wahrscheinlich ganz gut – auch bei der Arbeit sehe ich oft Möglichkeiten, wo andere zunächst nur den bestehenden Zustand sehen.
         </p>
+
 
         <p data-i18n="about.p3">
           Als Mutter ist mir außerdem wichtig, wie sich unsere Gesellschaft, Technik und besonders die Gesundheitsversorgung weiterentwickeln. Zukunft ist für mich deshalb nicht nur ein berufliches Thema.
         </p>
 
+
         <p data-i18n="about.p4">
           In meiner Region kann ich mir eine Vollzeittätigkeit auch vollständig vor Ort vorstellen. Bei größerer Entfernung bin ich offen für hybride oder remote Arbeitsmodelle.
         </p>
 
+
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -755,6 +954,7 @@ footer strong{
 <section id="experience">
 
   <div class="container">
+
 
     <h2>
 
@@ -797,6 +997,7 @@ footer strong{
       </div>
 
 
+
       <div class="timeline-item">
 
         <h4>
@@ -812,6 +1013,7 @@ footer strong{
         </p>
 
       </div>
+
 
 
       <div class="timeline-item">
@@ -832,6 +1034,7 @@ footer strong{
       </div>
 
 
+
       <div class="timeline-item">
 
         <h4>
@@ -848,6 +1051,7 @@ footer strong{
         </p>
 
       </div>
+
 
 
       <div class="timeline-item">
@@ -868,6 +1072,7 @@ footer strong{
       </div>
 
 
+
       <div class="timeline-item">
 
         <h4>
@@ -884,6 +1089,7 @@ footer strong{
         </p>
 
       </div>
+
 
 
       <div class="timeline-item">
@@ -904,6 +1110,7 @@ footer strong{
       </div>
 
 
+
       <div class="timeline-item">
 
         <h4>
@@ -920,6 +1127,7 @@ footer strong{
         </p>
 
       </div>
+
 
 
       <div class="timeline-item">
@@ -940,6 +1148,7 @@ footer strong{
       </div>
 
 
+
       <div class="timeline-item">
 
         <h4>
@@ -956,6 +1165,7 @@ footer strong{
         </p>
 
       </div>
+
 
 
       <div class="timeline-item">
@@ -979,6 +1189,7 @@ footer strong{
 
     </div>
 
+
   </div>
 
 </section>
@@ -993,6 +1204,7 @@ footer strong{
 
   <div class="container">
 
+
     <h2>
 
       <i class="fas fa-rocket"></i>
@@ -1006,9 +1218,11 @@ footer strong{
 
     <div class="project-header">
 
+
       <h3 data-i18n="proj.header">
         OnboardME – Digitales Onboarding neu gedacht
       </h3>
+
 
       <img
         src="obm.jpeg"
@@ -1016,10 +1230,12 @@ footer strong{
         class="project-image"
       >
 
+
     </div>
 
 
     <div class="project-content">
+
 
       <p data-i18n="proj.p1">
         Sie müssen sich OnboardMe nicht vorstellen – Sie können es selbst erleben. Im Video sehen Sie den Prototyp in Aktion.
@@ -1028,51 +1244,73 @@ footer strong{
 
       <div class="portfolio-grid">
 
+
         <div class="portfolio-item">
 
-          <video controls preload="auto" playsinline>
 
-            <source
-              src="OnboardMe_Werbevideo.mp4"
-              type="video/mp4"
-            >
+          <!--
+          DEUTSCH:
+          OnboardMe_Werbevideo.mp4
 
+          ENGLISCH:
+          OnboardMe_Werbevideo_EN.mp4
+          -->
+
+          <video
+            id="project-video"
+            src="OnboardMe_Werbevideo.mp4"
+            controls
+            playsinline
+            preload="metadata"
+          >
+            Ihr Browser unterstützt dieses Video nicht.
           </video>
 
+
         </div>
+
 
       </div>
 
 
       <div class="project-highlights">
 
+
         <h4 data-i18n="proj.results">
           Erkenntnisse und Fähigkeiten aus diesem Projekt
         </h4>
 
+
         <ul>
+
 
           <li data-i18n="proj.li1">
             Projektmanagement von A bis Z – Von der Anforderungsanalyse bis zur Zielerreichung
           </li>
 
+
           <li data-i18n="proj.li2">
             Prototyp-Entwicklung – Aufbau eines klickbaren Prototyps mit FlutterFlow
           </li>
+
 
           <li data-i18n="proj.li3">
             Nutzerforschung – Durchführung und Auswertung von Umfragen und Nutzertests
           </li>
 
+
           <li data-i18n="proj.li4">
             UI/UX Design – Gestaltung nutzerfreundlicher Oberflächen mit Fokus auf Benutzerfreundlichkeit
           </li>
+
 
           <li data-i18n="proj.li5">
             Prozessmodellierung – Komplexe Abläufe strukturieren und digital abbilden
           </li>
 
+
         </ul>
+
 
       </div>
 
@@ -1084,7 +1322,9 @@ footer strong{
         „OnboardME ist das fehlende Puzzleteil im modernen Onboarding – es schafft die Struktur und digitale Effizienz, die neue Mitarbeitende brauchen, um nahtlos Teil des Unternehmens zu werden."
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -1099,6 +1339,7 @@ footer strong{
 <section id="skills">
 
   <div class="container">
+
 
     <h2>
 
@@ -1129,6 +1370,7 @@ footer strong{
       </div>
 
 
+
       <div class="skill-card">
 
         <i class="fas fa-lightbulb"></i>
@@ -1144,6 +1386,7 @@ footer strong{
       </div>
 
 
+
       <div class="skill-card">
 
         <i class="fas fa-laptop-code"></i>
@@ -1154,11 +1397,14 @@ footer strong{
 
         <p data-i18n="skills.s3p">
           Microsoft 365 · Datenbanken &amp; SQL-Grundlagen · Netzwerk- &amp; Systemgrundlagen · Virtualisierung · Windows / Windows Server · Linux-Grundlagen · Informationssicherheit &amp; Datenschutz · HTML/CSS-Grundlagen · C-Grundlagen · technische Dokumentation
+
           <br><br>
+
           Praxis: MailStore · Securepoint · Centron
         </p>
 
       </div>
+
 
 
       <div class="skill-card">
@@ -1178,6 +1424,7 @@ footer strong{
 
     </div>
 
+
   </div>
 
 </section>
@@ -1188,11 +1435,16 @@ footer strong{
 <!-- KONTAKT -->
 <!-- ========================================================= -->
 
-<section id="contact" class="contact-section">
+<section
+  id="contact"
+  class="contact-section"
+>
 
   <div class="container">
 
+
     <div class="contact-headline">
+
 
       <h2>
 
@@ -1212,6 +1464,7 @@ footer strong{
         Ich freue mich auf ein persönliches Kennenlernen
       </p>
 
+
     </div>
 
 
@@ -1220,30 +1473,39 @@ footer strong{
 
       <div class="contact-card">
 
+
         <i class="fas fa-envelope"></i>
+
 
         <h3 data-i18n="contact.email">
           E-Mail
         </h3>
 
+
         <a href="mailto:sarah.omonsky@web.de">
           sarah.omonsky@web.de
         </a>
 
+
       </div>
+
 
 
       <div class="contact-card">
 
+
         <i class="fas fa-phone"></i>
+
 
         <h3 data-i18n="contact.phone">
           Telefon
         </h3>
 
+
         <a href="tel:+491722318451">
           0172 / 2318451
         </a>
+
 
       </div>
 
@@ -1251,7 +1513,12 @@ footer strong{
     </div>
 
 
-    <h2 style="margin-top:4rem;margin-bottom:2rem;">
+    <h2
+      style="
+        margin-top:4rem;
+        margin-bottom:2rem;
+      "
+    >
 
       <i class="fas fa-map-marker-alt"></i>
 
@@ -1264,13 +1531,16 @@ footer strong{
 
     <div class="map-frame">
 
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79011.84017471988!2d9.332932699999999!3d51.31359705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bb0f5489a89c1b%3A0xdc92e687339d24f5!2sKassel!5e0!3m2!1sde!2sde!4v1734389000000!5m2!1sde!2sde"
         allowfullscreen
         loading="lazy"
       ></iframe>
 
+
     </div>
+
 
   </div>
 
@@ -1284,13 +1554,18 @@ footer strong{
 
 <footer>
 
+
   <p>
-    <strong>© 2025 Sarah Omonsky</strong>
+    <strong>
+      © 2025 Sarah Omonsky
+    </strong>
   </p>
+
 
   <p data-i18n="footer.role">
     Kauffrau für Digitalisierungsmanagement
   </p>
+
 
   <span
     class="availability"
@@ -1298,6 +1573,7 @@ footer strong{
   >
     Verfügbar ab März 2026
   </span>
+
 
 </footer>
 
@@ -1310,65 +1586,96 @@ footer strong{
 <script>
 
 
+/* ========================================================= */
+/* DEUTSCHE ORIGINALTEXTE SPEICHERN */
+/* ========================================================= */
+
 document
   .querySelectorAll("[data-i18n]")
   .forEach(function(el){
 
-    el.dataset.de = el.innerHTML;
+    el.dataset.de =
+      el.innerHTML;
 
   });
 
 
+
+/* ========================================================= */
+/* ENGLISCHE ÜBERSETZUNGEN */
+/* ========================================================= */
 
 var translations = {
 
   en: {
 
 
+    /* STARTSEITE */
+
     "hero.topline":
       "Thank you for taking the time to learn more about me and my career path.",
+
 
     "hero.name":
       "Sarah Omonsky",
 
+
     "hero.subtitle":
       "Digitalization Management Specialist, Specialist in Outpatient Medical Care and DEKRA-certified Project Management Specialist.",
+
 
     "hero.mission":
       "My career path combines empathy and medical experience with project management and digitalization – a combination of heart and mind. My personal goal is to find a position where I can bring these different experiences together, continue to develop them and create real value through my work.",
 
 
+
+    /* NAVIGATION */
+
     "nav.about":
       "About me",
+
 
     "nav.experience":
       "Career",
 
+
     "nav.skills":
       "Skills",
+
 
     "nav.contact":
       "Contact",
 
 
+
+    /* ÜBER MICH */
+
     "about.title":
       "Get to know me better",
+
 
     "about.p1":
       "In my private life, I am interested in many things related to technology, design and practical solutions. I enjoy learning about cars, digital applications and new technologies simply because I like to understand how things work.",
 
+
     "about.p2":
       "I also love interior design and enjoy giving old furniture a second chance or even a completely new purpose. <strong>“What could I make out of this?”</strong> probably describes me quite well – even at work, I often see possibilities where others may first see only the current situation.",
 
+
     "about.p3":
       "As a mother, I also care about how our society, technology and especially healthcare continue to develop. The future is therefore more than just a professional topic for me.",
+
 
     "about.p4":
       "In my region, I can also imagine working full-time on site. For positions further away, I am open to hybrid or remote working models.",
 
 
+
+    /* WERDEGANG */
+
     "exp.title":
       "My professional journey",
+
 
     "exp.subtitle":
       "The journey is the destination.",
@@ -1377,12 +1684,14 @@ var translations = {
     "exp.item1.h":
       "Digitalization Management Specialist (IHK)",
 
+
     "exp.item1.p":
       "WBS TRAINING AG<br>Digitalization, project and process management, data and process analysis as well as IT fundamentals.<br><strong>WBS final result: 90% · IHK final result: 75 points · Digital Process Development: 81 points</strong>",
 
 
     "exp.item2.h":
       "IT-Service Johannsen GmbH, Hamburg",
+
 
     "exp.item2.p":
       "Internship as part of my retraining with practical experience in the technical and commercial IT environment, documentation, license and contract management and different IT systems. This environment also provided the starting point for my IHK final project <strong>“OnboardME”</strong>.",
@@ -1391,12 +1700,14 @@ var translations = {
     "exp.item3.h":
       "Project Management Specialist",
 
+
     "exp.item3.p":
       "DEKRA certification<br>Project planning, project control and controlling as well as quality, risk and communication management.",
 
 
     "exp.item4.h":
       "Klinikum Kassel – Department of Neurology",
+
 
     "exp.item4.p":
       "Medical Assistant / Study Assistant<br>Interface work between different professional groups, quality assurance, stroke documentation as well as organization and coordination of clinical processes.",
@@ -1405,12 +1716,14 @@ var translations = {
     "exp.item5.h":
       "Study Assistant Qualification",
 
+
     "exp.item5.p":
       "Center for Clinical Studies Leipzig<br>120 hours of training covering ICH-GCP, SOPs, documentation, monitoring/audits, statistics and information management.",
 
 
     "exp.item6.h":
       "Healthcare Management (B.Sc.)",
+
 
     "exp.item6.p":
       "Fulda University of Applied Sciences · 2 university semesters<br>University admission through the Hessian pilot scheme for professionally qualified applicants.",
@@ -1419,12 +1732,14 @@ var translations = {
     "exp.item7.h":
       "AGAPLESION Diakonie Kliniken Kassel",
 
+
     "exp.item7.p":
       "Medical Assistant · Central Admissions and Outpatient Center<br>Outpatient and inpatient admissions, coordination of diagnostic appointments and medical assistance.",
 
 
     "exp.item8.h":
       "Specialist in Outpatient Medical Care",
+
 
     "exp.item8.p":
       "Carl-Oelemann-Schule / State Medical Association of Hesse<br>Additional qualifications including <strong>Quality Management Officer, Training Officer and Data Protection Officer</strong> as well as practice management, team management and emergency management.",
@@ -1433,12 +1748,14 @@ var translations = {
     "exp.item9.h":
       "Gynecology Practice Matthias Fieber, Kassel",
 
+
     "exp.item9.p":
       "Medical Assistant<br>Practice organization, appointment and billing processes, patient care and medical assistance.",
 
 
     "exp.item10.h":
       "Rotes Kreuz Krankenhaus Kassel – Emergency Department",
+
 
     "exp.item10.p":
       "Medical Assistant<br>Administrative patient admission, coordination and support of processes in the emergency department.",
@@ -1447,46 +1764,64 @@ var translations = {
     "exp.item11.h":
       "Training as a Medical Assistant",
 
+
     "exp.item11.p":
       "KfH Kidney Center Kassel<br>The beginning of my professional career in healthcare.<br><strong>Vocational school final grade: 1.7.</strong>",
 
 
+
+    /* ONBOARDME */
+
     "proj.title":
       "My IHK final project",
+
 
     "proj.header":
       "OnboardME – rethinking digital onboarding",
 
+
     "proj.p1":
       "You do not have to imagine OnboardME – you can experience it yourself. In the video, you can see the prototype in action.",
+
 
     "proj.results":
       "Insights and skills from this project",
 
+
     "proj.li1":
       "Project management from A to Z – from requirements analysis to goal achievement",
+
 
     "proj.li2":
       "Prototype development – building a clickable prototype with FlutterFlow",
 
+
     "proj.li3":
       "User research – conducting and evaluating surveys and user tests",
+
 
     "proj.li4":
       "UI/UX design – designing user-friendly interfaces with a focus on usability",
 
+
     "proj.li5":
       "Process modeling – structuring complex workflows and digitally mapping them",
+
 
     "proj.quote":
       "OnboardME is the missing puzzle piece in modern onboarding – it creates the structure and digital efficiency that new employees need to seamlessly become part of the company.",
 
 
+
+    /* KOMPETENZEN */
+
     "skills.title":
       "My skills",
 
+
     "skills.s1":
       "PROJECTS & PROCESSES",
+
 
     "skills.s1p":
       "Project planning & control · process analysis & optimization · requirements management · risk management · target/actual controlling · quality management · SOP creation",
@@ -1495,12 +1830,14 @@ var translations = {
     "skills.s2":
       "DIGITALIZATION & PRODUCT DEVELOPMENT",
 
+
     "skills.s2p":
       "Digital transformation · digital business models · digital solution concepts · digital product development · prototyping · FlutterFlow / No-Code · UI/UX fundamentals · user testing & usability · economic analysis",
 
 
     "skills.s3":
       "IT & DIGITAL FUNDAMENTALS",
+
 
     "skills.s3p":
       "Microsoft 365 · databases & SQL fundamentals · network & system fundamentals · virtualization · Windows / Windows Server · Linux fundamentals · information security & data protection · HTML/CSS fundamentals · C fundamentals · technical documentation<br><br>Practical experience: MailStore · Securepoint · Centron",
@@ -1509,28 +1846,40 @@ var translations = {
     "skills.s4":
       "HEALTHCARE & CLINICAL PROCESSES",
 
+
     "skills.s4p":
       "Clinical processes · outpatient and inpatient care · medical documentation · quality management · data protection & confidentiality · secure handling of sensitive data · emergency management · interdisciplinary coordination · clinical studies / ICH-GCP",
 
 
+
+    /* KONTAKT */
+
     "contact.title":
       "Contact",
+
 
     "contact.subtitle":
       "I look forward to getting to know you personally",
 
+
     "contact.email":
       "Email",
 
+
     "contact.phone":
       "Phone",
+
 
     "contact.location":
       "Location",
 
 
+
+    /* FOOTER */
+
     "footer.role":
       "Digitalization Management Specialist",
+
 
     "footer.availability":
       "Available from March 2026"
@@ -1540,6 +1889,10 @@ var translations = {
 };
 
 
+
+/* ========================================================= */
+/* SPRACHBUTTONS */
+/* ========================================================= */
 
 function setLangButtonState(lang){
 
@@ -1558,11 +1911,15 @@ function setLangButtonState(lang){
   if(lang === "en"){
 
     deBtn.classList.remove("active-lang");
+
     enBtn.classList.add("active-lang");
 
-  }else{
+  }
+
+  else{
 
     enBtn.classList.remove("active-lang");
+
     deBtn.classList.add("active-lang");
 
   }
@@ -1571,10 +1928,15 @@ function setLangButtonState(lang){
 
 
 
+/* ========================================================= */
+/* VORSTELLUNGSVIDEO WECHSELN */
+/* ========================================================= */
+
 function setAboutVideo(lang){
 
   var video =
     document.getElementById("about-video");
+
 
   if(!video){
     return;
@@ -1589,7 +1951,9 @@ function setAboutVideo(lang){
     newSource =
       "Vorstellung_Sarah_EN.mp4";
 
-  }else{
+  }
+
+  else{
 
     newSource =
       "Vorstellung_Sarah_DE.mp4";
@@ -1617,11 +1981,70 @@ function setAboutVideo(lang){
 
 
 
+/* ========================================================= */
+/* ONBOARDME-WERBEVIDEO WECHSELN */
+/* ========================================================= */
+
+function setProjectVideo(lang){
+
+  var video =
+    document.getElementById("project-video");
+
+
+  if(!video){
+    return;
+  }
+
+
+  var newSource;
+
+
+  if(lang === "en"){
+
+    newSource =
+      "OnboardMe_Werbevideo_EN.mp4";
+
+  }
+
+  else{
+
+    newSource =
+      "OnboardMe_Werbevideo.mp4";
+
+  }
+
+
+  if(
+    video.getAttribute("src")
+    !== newSource
+  ){
+
+    video.pause();
+
+    video.setAttribute(
+      "src",
+      newSource
+    );
+
+    video.load();
+
+  }
+
+}
+
+
+
+/* ========================================================= */
+/* SPRACHE WECHSELN */
+/* ========================================================= */
+
 function switchLanguage(lang){
+
 
   document
     .querySelectorAll("[data-i18n]")
     .forEach(function(el){
+
 
       var key =
         el.getAttribute("data-i18n");
@@ -1645,14 +2068,18 @@ function switchLanguage(lang){
         el.innerHTML =
           translations[lang][key];
 
-      }else{
+      }
+
+      else{
 
         el.innerHTML =
           el.dataset.de;
 
       }
 
+
     });
+
 
 
   document.documentElement.lang =
@@ -1665,9 +2092,15 @@ function switchLanguage(lang){
 
   setAboutVideo(lang);
 
+  setProjectVideo(lang);
+
 }
 
 
+
+/* ========================================================= */
+/* DEUTSCH */
+/* ========================================================= */
 
 document
   .getElementById("lang-de")
@@ -1683,6 +2116,11 @@ document
   );
 
 
+
+/* ========================================================= */
+/* ENGLISCH */
+/* ========================================================= */
+
 document
   .getElementById("lang-en")
   .addEventListener(
@@ -1697,8 +2135,16 @@ document
   );
 
 
+
+/* ========================================================= */
+/* STARTZUSTAND */
+/* ========================================================= */
+
 setLangButtonState("de");
+
 setAboutVideo("de");
+
+setProjectVideo("de");
 
 
 </script>
