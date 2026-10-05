@@ -121,11 +121,14 @@ h2 i{
   text-align:left;
 }
 
+/* GEÄNDERT: obere Zeile mittig */
 .topline{
   color:var(--gold-light);
   text-transform:uppercase;
   letter-spacing:.08em;
-  margin-bottom:1.2rem;
+  margin-bottom:2rem;
+  text-align:center;
+  width:100%;
 }
 
 .hero h1{
@@ -200,11 +203,13 @@ h2 i{
 
 /* ABOUT */
 
+/* GEÄNDERT: Video über Text statt links daneben */
 .about-layout{
   display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:3rem;
-  margin-top:3rem;
+  grid-template-columns:1fr;
+  gap:2rem;
+  max-width:1000px;
+  margin:3rem auto 0;
 }
 
 .portrait-frame{
@@ -213,6 +218,9 @@ h2 i{
   border-radius:1.2rem;
   box-shadow:none;
   height:fit-content;
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
 }
 
 .portrait-frame img,
@@ -239,11 +247,16 @@ h2 i{
 .content-card{
   border-radius:1.4rem;
   padding:clamp(1.4rem,4vw,3rem);
+  width:100%;
 }
 
 .content-card p{
   color:var(--muted);
   margin-bottom:1.4rem;
+}
+
+.content-card p:last-child{
+  margin-bottom:0;
 }
 
 strong{
@@ -411,18 +424,21 @@ video{
 
 /* SKILLS */
 
+/* GEÄNDERT: 4 Kästen nebeneinander */
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:1.6rem;
-  max-width:1040px;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1.4rem;
+  max-width:1200px;
   margin:3rem auto 0;
+  align-items:stretch;
 }
 
 .skill-card{
   text-align:center;
-  padding:2rem;
+  padding:2rem 1.25rem;
   border-radius:1.15rem;
+  height:100%;
 }
 
 .skill-card i{
@@ -519,15 +535,34 @@ footer strong{
 
 /* RESPONSIVE */
 
+@media(max-width:1100px){
+
+  .skills-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+}
+
 @media(max-width:900px){
 
-  .hero-grid,
-  .about-layout{
+  .hero-grid{
     grid-template-columns:1fr;
   }
 
   .hero-content{
     text-align:center;
+  }
+
+  .about-layout{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .skills-grid{
+    grid-template-columns:1fr;
   }
 
 }
@@ -743,8 +778,6 @@ footer strong{
     <div class="timeline">
 
 
-      <!-- 1 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -764,8 +797,6 @@ footer strong{
       </div>
 
 
-      <!-- 2 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -782,8 +813,6 @@ footer strong{
 
       </div>
 
-
-      <!-- 3 -->
 
       <div class="timeline-item">
 
@@ -803,8 +832,6 @@ footer strong{
       </div>
 
 
-      <!-- 4 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -822,8 +849,6 @@ footer strong{
 
       </div>
 
-
-      <!-- 5 -->
 
       <div class="timeline-item">
 
@@ -843,8 +868,6 @@ footer strong{
       </div>
 
 
-      <!-- 6 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -862,8 +885,6 @@ footer strong{
 
       </div>
 
-
-      <!-- 7 -->
 
       <div class="timeline-item">
 
@@ -883,8 +904,6 @@ footer strong{
       </div>
 
 
-      <!-- 8 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -902,8 +921,6 @@ footer strong{
 
       </div>
 
-
-      <!-- 9 -->
 
       <div class="timeline-item">
 
@@ -923,8 +940,6 @@ footer strong{
       </div>
 
 
-      <!-- 10 -->
-
       <div class="timeline-item">
 
         <h4>
@@ -942,8 +957,6 @@ footer strong{
 
       </div>
 
-
-      <!-- 11 -->
 
       <div class="timeline-item">
 
@@ -974,7 +987,6 @@ footer strong{
 
 <!-- ========================================================= -->
 <!-- ONBOARDME -->
-<!-- UNVERÄNDERT -->
 <!-- ========================================================= -->
 
 <section id="project">
@@ -1102,8 +1114,6 @@ footer strong{
     <div class="skills-grid">
 
 
-      <!-- PROJEKT & PROZESSE -->
-
       <div class="skill-card">
 
         <i class="fas fa-tasks"></i>
@@ -1119,8 +1129,6 @@ footer strong{
       </div>
 
 
-      <!-- DIGITALISIERUNG -->
-
       <div class="skill-card">
 
         <i class="fas fa-lightbulb"></i>
@@ -1135,8 +1143,6 @@ footer strong{
 
       </div>
 
-
-      <!-- IT -->
 
       <div class="skill-card">
 
@@ -1154,8 +1160,6 @@ footer strong{
 
       </div>
 
-
-      <!-- HEALTHCARE -->
 
       <div class="skill-card">
 
@@ -1276,7 +1280,6 @@ footer strong{
 
 <!-- ========================================================= -->
 <!-- FOOTER -->
-<!-- UNVERÄNDERT -->
 <!-- ========================================================= -->
 
 <footer>
@@ -1301,13 +1304,11 @@ footer strong{
 
 
 <!-- ========================================================= -->
-<!-- SPRACHWECHSEL DE / EN -->
+<!-- SPRACHWECHSEL -->
 <!-- ========================================================= -->
 
 <script>
 
-
-/* Deutsche Originaltexte speichern */
 
 document
   .querySelectorAll("[data-i18n]")
@@ -1319,14 +1320,10 @@ document
 
 
 
-/* Englische Übersetzungen */
-
 var translations = {
 
   en: {
 
-
-    /* STARTSEITE */
 
     "hero.topline":
       "Thank you for taking the time to learn more about me and my career path.",
@@ -1341,8 +1338,6 @@ var translations = {
       "My career path combines empathy and medical experience with project management and digitalization – a combination of heart and mind. My personal goal is to find a position where I can bring these different experiences together, continue to develop them and create real value through my work.",
 
 
-    /* NAVIGATION */
-
     "nav.about":
       "About me",
 
@@ -1355,8 +1350,6 @@ var translations = {
     "nav.contact":
       "Contact",
 
-
-    /* ÜBER MICH */
 
     "about.title":
       "Get to know me better",
@@ -1373,8 +1366,6 @@ var translations = {
     "about.p4":
       "In my region, I can also imagine working full-time on site. For positions further away, I am open to hybrid or remote working models.",
 
-
-    /* WERDEGANG */
 
     "exp.title":
       "My professional journey",
@@ -1460,8 +1451,6 @@ var translations = {
       "KfH Kidney Center Kassel<br>The beginning of my professional career in healthcare.<br><strong>Vocational school final grade: 1.7.</strong>",
 
 
-    /* ONBOARDME */
-
     "proj.title":
       "My IHK final project",
 
@@ -1492,8 +1481,6 @@ var translations = {
     "proj.quote":
       "OnboardME is the missing puzzle piece in modern onboarding – it creates the structure and digital efficiency that new employees need to seamlessly become part of the company.",
 
-
-    /* KOMPETENZEN */
 
     "skills.title":
       "My skills",
@@ -1526,8 +1513,6 @@ var translations = {
       "Clinical processes · outpatient and inpatient care · medical documentation · quality management · data protection & confidentiality · secure handling of sensitive data · emergency management · interdisciplinary coordination · clinical studies / ICH-GCP",
 
 
-    /* KONTAKT */
-
     "contact.title":
       "Contact",
 
@@ -1544,8 +1529,6 @@ var translations = {
       "Location",
 
 
-    /* FOOTER */
-
     "footer.role":
       "Digitalization Management Specialist",
 
@@ -1558,16 +1541,19 @@ var translations = {
 
 
 
-/* Sprachbuttons optisch markieren */
-
 function setLangButtonState(lang){
 
-  var deBtn = document.getElementById("lang-de");
-  var enBtn = document.getElementById("lang-en");
+  var deBtn =
+    document.getElementById("lang-de");
+
+  var enBtn =
+    document.getElementById("lang-en");
+
 
   if(!deBtn || !enBtn){
     return;
   }
+
 
   if(lang === "en"){
 
@@ -1585,30 +1571,36 @@ function setLangButtonState(lang){
 
 
 
-/* Vorstellungsvideo DE / EN wechseln */
-
 function setAboutVideo(lang){
 
-  var video = document.getElementById("about-video");
+  var video =
+    document.getElementById("about-video");
 
   if(!video){
     return;
   }
 
+
   var newSource;
+
 
   if(lang === "en"){
 
-    newSource = "Vorstellung_Sarah_EN.mp4";
+    newSource =
+      "Vorstellung_Sarah_EN.mp4";
 
   }else{
 
-    newSource = "Vorstellung_Sarah_DE.mp4";
+    newSource =
+      "Vorstellung_Sarah_DE.mp4";
 
   }
 
 
-  if(video.getAttribute("src") !== newSource){
+  if(
+    video.getAttribute("src")
+    !== newSource
+  ){
 
     video.pause();
 
@@ -1624,8 +1616,6 @@ function setAboutVideo(lang){
 }
 
 
-
-/* Sprache wechseln */
 
 function switchLanguage(lang){
 
@@ -1679,8 +1669,6 @@ function switchLanguage(lang){
 
 
 
-/* Deutsch */
-
 document
   .getElementById("lang-de")
   .addEventListener(
@@ -1694,9 +1682,6 @@ document
     }
   );
 
-
-
-/* Englisch */
 
 document
   .getElementById("lang-en")
@@ -1712,11 +1697,7 @@ document
   );
 
 
-
-/* Startzustand */
-
 setLangButtonState("de");
-
 setAboutVideo("de");
 
 
